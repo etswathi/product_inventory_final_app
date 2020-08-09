@@ -5,6 +5,8 @@ import Common from "../Common";
 class Pdpcomponent extends React.Component {
   constructor() {
     super();
+    
+    
 
     this.state = {
       delete: false,
@@ -12,6 +14,10 @@ class Pdpcomponent extends React.Component {
   }
 
   componentWillMount() {
+    if(this.props.location.state === undefined) {
+      this.props.history.push("./products");
+      window.location.reload(false);
+    }
     console.log(this.props);
   }
 

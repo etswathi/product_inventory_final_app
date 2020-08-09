@@ -20,10 +20,16 @@ class UpdateProduct extends React.Component {
       week4: 0,
       week5: 0,
       week6: 0,
+      nameError:''
     };
   }
 
   componentWillMount() {
+    if (this.props.location.state === undefined) {
+      this.props.history.push("/products");
+      window.location.reload(false);
+    }
+
     if (this.props.location.state !== undefined) {
       axios
         .get(
@@ -56,53 +62,121 @@ class UpdateProduct extends React.Component {
         );
     }
   }
+  checkValidation = () => {
+    console.log("chek");
+    let nameerror = "";
+    let sinceerror = "";
+    if (this.state.productName === "") {
+      nameerror = "Please enter first name";
+    }
+    if (this.state.productDescription === "") {
+      nameerror = "Please enter last name";
+    }
+    if (this.state.productPrice === "") {
+      nameerror = "Please enter user name";
+    }
+    if (this.state.categoryName === "") {
+      nameerror = "Please enter email";
+    }
+    if (this.state.inStock === "") {
+      nameerror = "Please enter password";
+    }
+    if (this.state.quantity === "") {
+      nameerror = "Please enter password";
+    }
+    if (this.state.week1 === "") {
+      nameerror = "Please enter password";
+    }
+    if (this.state.week2 === "") {
+      nameerror = "Please enter password";
+    }
+    if (this.state.week3 === "") {
+      nameerror = "Please enter password";
+    }
+    if (this.state.week4 === "") {
+      nameerror = "Please enter password";
+    }
+    if (this.state.week5 === "") {
+      nameerror = "Please enter password";
+    }
+    if (this.state.week6 === "") {
+      nameerror = "Please enter password";
+    }
+
+    if (nameerror) {
+      console.log("set state for nameError");
+      this.setState({
+        nameError: nameerror,
+      });
+
+      return false;
+    }
+
+    this.setState({
+      nameError: "",
+    });
+    return true;
+  };
 
   onChangeName = (event) => {
     this.setState({
       productName: event.target.value,
     });
+    this.checkValidation()
   };
   onChangeDescription = (event) => {
     this.setState({
       productDescription: event.target.value,
     });
+    this.checkValidation()
   };
   onChangePrice = (event) => {
     this.setState({
       productPrice: event.target.value,
     });
+    this.checkValidation()
   };
   onChangeCategory = (event) => {
     this.setState({
       categoryName: event.target.value,
     });
+    this.checkValidation()
   };
   onChangeStock = (event) => {
     this.setState({
       inStock: event.target.value,
     });
+    this.checkValidation()
   };
   onChangeQuantity = (event) => {
     this.setState({ quantity: event.target.value });
+    this.checkValidation()
   };
+  
 
   onChangeWeek1 = (event) => {
     this.setState({ week1: event.target.value });
+    this.checkValidation()
   };
   onChangeWeek2 = (event) => {
     this.setState({ week2: event.target.value });
+    this.checkValidation()
   };
   onChangeWeek3 = (event) => {
     this.setState({ week3: event.target.value });
+    this.checkValidation()
   };
   onChangeWeek4 = (event) => {
     this.setState({ week4: event.target.value });
+    this.checkValidation()
   };
   onChangeWeek5 = (event) => {
     this.setState({ week5: event.target.value });
+    this.checkValidation()
   };
   onChangeWeek6 = (event) => {
     this.setState({ week6: event.target.value });
+    this.checkValidation()
   };
 
   onChangeImage = (event) => {
@@ -112,6 +186,7 @@ class UpdateProduct extends React.Component {
   };
 
   updatePro = (event) => {
+    if(this.checkValidation()){
     event.preventDefault();
 
     console.log(this.state);
@@ -147,6 +222,7 @@ class UpdateProduct extends React.Component {
         }
       );
   };
+}
 
   render() {
     console.log(this.props);
@@ -164,7 +240,7 @@ class UpdateProduct extends React.Component {
                 color: "lightgoldenrodyellow",
               }}
             >
-              <b>Add new product</b>
+              <b>Update details</b>
             </h3>
             <form>
               <input
@@ -197,7 +273,7 @@ class UpdateProduct extends React.Component {
               <input
                 onChange={this.onChangeCategory}
                 type="text"
-                placeholder="Ctegory"
+                placeholder="Category"
                 value={this.state.categoryName}
                 required
               />

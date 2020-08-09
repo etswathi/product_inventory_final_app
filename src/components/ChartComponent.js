@@ -7,8 +7,14 @@ import Common from "./Common";
 class ChartComponent extends React.Component {
   constructor(props) {
     super(props);
+    console.log(this.props.location.state);
+    if (this.props.location.state === undefined) {
+      this.props.history.push("/products");
+      window.location.reload(false);
+    }
     var value = this.props.location.state.chartdata;
     this.state = {
+      error: false,
       data: [
         ["Ye", "Stock", { role: "style" }],
         [
@@ -55,6 +61,16 @@ class ChartComponent extends React.Component {
         <Common></Common>
 
         <div className="content">
+          <h1
+            style={{
+              marginTop: "-40px",
+              color: "white",
+              fontFamily: "TimesNewRoman",
+              textDecoration: "underline",
+            }}
+          >
+            Stock details:{this.props.location.state.product}
+          </h1>
           <Chart
             chartType="BarChart"
             width="100%"

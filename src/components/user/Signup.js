@@ -130,6 +130,7 @@ class SignUp extends React.Component {
               signupbutton: true,
               email: this.state.email,
               password: this.state.password,
+              username:this.state.userName
             },
           });
         },

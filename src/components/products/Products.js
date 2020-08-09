@@ -180,7 +180,7 @@ class Products extends React.Component {
           console.log(response);
           this.setState({
             products: response.data,
-          });
+          },()=>console.log(this.state.products));
           this.renderAllProducts();
         },
 
@@ -228,6 +228,7 @@ class Products extends React.Component {
           pathname: "/chart",
           state: {
             chartdata: response.data.stock,
+            product:response.data.productName
           },
         });
       },

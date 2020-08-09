@@ -8,8 +8,38 @@ import image5 from "./images/kids.jpg";
 import image6 from "./images/pexels-photo-396547.jpeg";
 import logo from "./images/logoo.png";
 import { Link } from "react-router-dom";
+import axios from "axios";
 class HomePage extends React.Component {
-  state = {};
+  constructor() {
+    super();
+    this.state = {
+      username: "",
+    };
+  }
+
+  componentWillMount() {
+    console.log(this.props);
+    if (this.props.location.state === undefined) {
+      this.props.history.push("/signup");
+      window.location.reload(false);
+    }
+
+    if (this.props.location.state.verifiedemail) {
+      console.log("inside axios");
+
+      axios
+        .get(
+          "http://localhost:3000/allusers?email=" +
+            this.props.location.state.verifiedemail
+        )
+        .then((response) => {
+          this.setState({
+            username: response.data[0].userName,
+          });
+        });
+    }
+  }
+
   render() {
     return (
       <div>
@@ -23,6 +53,21 @@ class HomePage extends React.Component {
             <h3>
               <span>Inventory.com</span>
             </h3>
+          </div>
+          <div class="right">
+            {this.props.location.state.signup && (
+              <p style={{ color: "white" }}>
+                <i class="fas fa-user-circle"></i>
+                <span>Hi,{this.props.location.state.username}</span>
+              </p>
+            )}
+
+            {this.props.location.state.login && (
+              <p style={{ color: "white" }}>
+                <i class="fas fa-user-circle"></i>
+                <span>Hi,{this.state.username}</span>
+              </p>
+            )}
           </div>
         </header>
         <div className="sidebar">

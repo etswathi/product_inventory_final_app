@@ -19,24 +19,6 @@
       "id": 1
     },
     {
-      "productName": "Camera",
-      "productDescription": "Canon PowerShot SX540HS 20.3MP Digital Camera with 50x Optical Zoom (Black) + Memory Card + Camera Case",
-      "productPrice": 18990,
-      "categoryName": "Electronics",
-      "inStock": true,
-      "quantity": 5,
-      "productImage": "https://images-na.ssl-images-amazon.com/images/I/71Xp-K4MMBL._SL1000_.jpg",
-      "stock": {
-        "week1": 90,
-        "week2": 80,
-        "week3": 90,
-        "week4": 90,
-        "week5": 50,
-        "week6": 20
-      },
-      "id": 2
-    },
-    {
       "productName": "Laptop high end",
       "productDescription": "HP 245 7GZ75PA#ACJ 14-inch Laptop (A6-9225/4GB/1TB/DOS/Integrated Graphics), Black",
       "productPrice": 22800,
@@ -107,6 +89,42 @@
         "week6": 20
       },
       "id": 7
+    },
+    {
+      "productName": "Jeans",
+      "productDescription": "white jeans",
+      "productPrice": "700",
+      "categoryName": "Dress",
+      "inStock": "true",
+      "quantity": "80",
+      "productImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT5W_J0rioi1WjE5qBoFWq0k5NeLgXbY5GOnA&usqp=CAU",
+      "stock": {
+        "week1": 40,
+        "week2": 30,
+        "week3": 50,
+        "week4": 70,
+        "week5": 30,
+        "week6": 80
+      },
+      "id": 8
+    },
+    {
+      "productName": "Camera",
+      "productDescription": "High quality camera black colour",
+      "productPrice": "7900",
+      "categoryName": "Electronics",
+      "inStock": "true",
+      "quantity": "60",
+      "productImage": "https://images-na.ssl-images-amazon.com/images/I/914hFeTU2-L._SL1500_.jpg",
+      "stock": {
+        "week1": 60,
+        "week2": 60,
+        "week3": 60,
+        "week4": 40,
+        "week5": 80,
+        "week6": 40
+      },
+      "id": 9
     }
   ],
   "allusers": [
@@ -135,52 +153,20 @@
       "id": 3
     },
     {
-      "firstName": "ab",
-      "lastName": "b",
-      "userName": "g",
-      "email": "d",
-      "password": "e",
+      "firstName": "Aswathi",
+      "lastName": "A",
+      "userName": "Aswati",
+      "email": "aswathi@gmail.com",
+      "password": "aswathi",
       "id": 4
     },
     {
-      "firstName": "f",
-      "lastName": "h",
-      "userName": "v",
-      "email": "c",
-      "password": "x",
-      "id": 5
-    },
-    {
-      "firstName": "b",
-      "lastName": "g",
-      "userName": "f",
-      "email": "d",
-      "password": "v",
-      "id": 6
-    },
-    {
-      "firstName": "c",
-      "lastName": "d",
-      "userName": "s",
-      "email": "f",
-      "password": "x",
-      "id": 7
-    },
-    {
-      "firstName": "c",
-      "lastName": "d",
-      "userName": "v",
-      "email": "e",
-      "password": "e",
-      "id": 8
-    },
-    {
-      "firstName": "l",
-      "lastName": "j",
-      "userName": "i",
-      "email": "i",
-      "password": "i",
-      "id": 9
+      "firstName": "llmm",
+      "lastName": "ff",
+      "userName": "Samyuktha",
+      "email": "s@gmail.com",
+      "password": "s",
+      "id": 14
     }
   ]
 }
