@@ -1,0 +1,186 @@
+{
+  "allproducts": [
+    {
+      "productName": "TV",
+      "productDescription": "Acer 18.5 inch HD Backlit LED LCD Monitor - 200 Nits - VGA Port - EB192Q (Black)",
+      "productPrice": 4339,
+      "categoryName": "Electronics",
+      "inStock": "true",
+      "quantity": 5,
+      "productImage": "https://images-na.ssl-images-amazon.com/images/I/91JxQOfRasL._SL1500_.jpg",
+      "stock": {
+        "week1": 90,
+        "week2": 80,
+        "week3": 90,
+        "week4": 90,
+        "week5": 50,
+        "week6": 20
+      },
+      "id": 1
+    },
+    {
+      "productName": "Camera",
+      "productDescription": "Canon PowerShot SX540HS 20.3MP Digital Camera with 50x Optical Zoom (Black) + Memory Card + Camera Case",
+      "productPrice": 18990,
+      "categoryName": "Electronics",
+      "inStock": true,
+      "quantity": 5,
+      "productImage": "https://images-na.ssl-images-amazon.com/images/I/71Xp-K4MMBL._SL1000_.jpg",
+      "stock": {
+        "week1": 90,
+        "week2": 80,
+        "week3": 90,
+        "week4": 90,
+        "week5": 50,
+        "week6": 20
+      },
+      "id": 2
+    },
+    {
+      "productName": "Laptop high end",
+      "productDescription": "HP 245 7GZ75PA#ACJ 14-inch Laptop (A6-9225/4GB/1TB/DOS/Integrated Graphics), Black",
+      "productPrice": 22800,
+      "categoryName": "Electronics",
+      "inStock": true,
+      "quantity": 5,
+      "productImage": "https://images-na.ssl-images-amazon.com/images/I/61Qj74HHVqL._SL1500_.jpg",
+      "stock": {
+        "week1": 90,
+        "week2": 80,
+        "week3": 90,
+        "week4": 90,
+        "week5": 50,
+        "week6": 20
+      },
+      "id": 3
+    },
+    {
+      "productName": "Women's Top",
+      "productDescription": "ILLI LONDON Women's Maxi Dress",
+      "productPrice": 2800,
+      "categoryName": "Dress",
+      "inStock": true,
+      "quantity": 8,
+      "productImage": "https://images-na.ssl-images-amazon.com/images/I/71xJeqBSXFL._UL1500_.jpg",
+      "stock": {
+        "week1": 90,
+        "week2": 80,
+        "week3": 90,
+        "week4": 90,
+        "week5": 50,
+        "week6": 20
+      },
+      "id": 4
+    },
+    {
+      "productName": "Saree",
+      "productDescription": "Anni Designer Women's Orange Color Satin Silk Printed Saree With Blouse Piece(PRINTED ROSHNI ORANGE_Free Size)",
+      "productPrice": 22800,
+      "categoryName": "Dress",
+      "inStock": true,
+      "quantity": 5,
+      "productImage": "https://images-na.ssl-images-amazon.com/images/I/81zUZEJOrAL._UL1500_.jpg",
+      "stock": {
+        "week1": 90,
+        "week2": 80,
+        "week3": 90,
+        "week4": 90,
+        "week5": 50,
+        "week6": 20
+      },
+      "id": 5
+    },
+    {
+      "productName": "Toy",
+      "productDescription": "NKK PNP Newly Kids Sofa Cum Bed (Pink)",
+      "productPrice": 2800,
+      "categoryName": "Kids",
+      "inStock": true,
+      "quantity": 8,
+      "productImage": "https://images-na.ssl-images-amazon.com/images/I/51sud34Mp1L.jpg",
+      "stock": {
+        "week1": 90,
+        "week2": 80,
+        "week3": 90,
+        "week4": 90,
+        "week5": 50,
+        "week6": 20
+      },
+      "id": 7
+    }
+  ],
+  "allusers": [
+    {
+      "id": 1,
+      "firstName": "Reena",
+      "lastName": "ET",
+      "userName": "reenaet",
+      "email": "reena@gmail.com",
+      "password": "reena"
+    },
+    {
+      "firstName": "Swathi",
+      "lastName": "E T",
+      "userName": "swathiet",
+      "email": "swathiet@gmail.com",
+      "password": "swathiet",
+      "id": 2
+    },
+    {
+      "firstName": "Anoop",
+      "lastName": "Rahul",
+      "userName": "anooprahul",
+      "email": "anooprahul@gmail.com",
+      "password": "anooprahul",
+      "id": 3
+    },
+    {
+      "firstName": "ab",
+      "lastName": "b",
+      "userName": "g",
+      "email": "d",
+      "password": "e",
+      "id": 4
+    },
+    {
+      "firstName": "f",
+      "lastName": "h",
+      "userName": "v",
+      "email": "c",
+      "password": "x",
+      "id": 5
+    },
+    {
+      "firstName": "b",
+      "lastName": "g",
+      "userName": "f",
+      "email": "d",
+      "password": "v",
+      "id": 6
+    },
+    {
+      "firstName": "c",
+      "lastName": "d",
+      "userName": "s",
+      "email": "f",
+      "password": "x",
+      "id": 7
+    },
+    {
+      "firstName": "c",
+      "lastName": "d",
+      "userName": "v",
+      "email": "e",
+      "password": "e",
+      "id": 8
+    },
+    {
+      "firstName": "l",
+      "lastName": "j",
+      "userName": "i",
+      "email": "i",
+      "password": "i",
+      "id": 9
+    }
+  ]
+}

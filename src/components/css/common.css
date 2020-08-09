@@ -1,0 +1,129 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+  }
+  
+  header {
+    position: fixed;
+    background: #22242a;
+    padding: 20 px;
+    width: 100%;
+    height: 80px;
+  }
+  
+  .left_area {
+    color: #fff;
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 22px;
+    font-weight: 900;
+  }
+  
+  .left_area span {
+    color: #1dc4e7;
+    float: left;
+    margin-top: -70px;
+  }
+  /* .search{ */
+  
+  .box {
+    margin: auto;
+    margin-top: 20px;
+    position: relative;
+    width: 250px;
+    height: 40px;
+    border: none;
+    padding: 0px;
+    border-radius: 50px;
+  }
+  .element {
+    width: 200px;
+    height: 40px;
+  }
+  .search {
+    border: none;
+    height: 30px;
+    width: 200px;
+  
+    border-radius: 50px;
+  
+    color: #424242;
+    font-weight: 500;
+  }
+  
+  .element a {
+    font-size: 30px;
+    color: white;
+  }
+  .search:focus {
+    outline: none;
+  }
+  
+ 
+  .sidebar {
+    background:#2f323a;
+    width: 250px;
+    height: 100%;
+    margin-top: 80px;
+    padding-top: 30px;
+    position: fixed;
+  
+    left: 0;
+    transition: 0.5s;
+  }
+  
+  .sidebar .image {
+    width: 150px;
+    height: 150px;
+    border-radius: 100px;
+    margin-bottom: 10px;
+  }
+  
+  .sidebar h4 {
+    color: #ccc;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  .sidebar a {
+    color: #fff;
+    display: block;
+    width: 100%;
+    line-height: 60px;
+    text-decoration: none;
+    padding-left: 40px;
+    box-sizing: border-box;
+  }
+  .sidebar a:hover {
+    background: black;
+  }
+  .sidebar i {
+    padding-right: 10px;
+  }
+  
+  label #sidebar_btn {
+    z-index: 1;
+    color: #fff;
+    position: fixed;
+    cursor: pointer;
+    left: 300px;
+    font-size: 30px;
+    margin-top: 25px;
+    transition-property: color;
+  }
+  label #sidebar_btn:hover {
+    color: #19b303;
+  }
+  #check:checked ~ .sidebar {
+    left: -190px;
+  }
+  
+  #check:checked ~ .sidebar a span {
+    display: none;
+  }
+  
+  #check:checked ~ .sidebar a {
+    font-size: 20px;
+    margin-left: 170px;
+    width: 80px;
+  }
