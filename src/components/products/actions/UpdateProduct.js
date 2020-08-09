@@ -1,7 +1,7 @@
 import React from "react";
-import "./css/addnewproduct.css";
+import "../../css/addnewproduct.css";
 import axios from "axios";
-import Common from "./Common";
+import Common from "../../Common";
 class UpdateProduct extends React.Component {
   constructor(props) {
     super();
@@ -155,10 +155,17 @@ class UpdateProduct extends React.Component {
         <Common></Common>
 
         <div className="content">
-         
-
           <div className="wrapadd">
-          <h3 style={{fontFamily:'TimesNewRoman',fontSize:'30px',textDecoration:'underline',color:'lightgoldenrodyellow'}}><b>Add new product</b></h3>
+            <h3
+              style={{
+                fontFamily: "TimesNewRoman",
+                fontSize: "30px",
+                textDecoration: "underline",
+                color: "lightgoldenrodyellow",
+              }}
+            >
+              <b>Add new product</b>
+            </h3>
             <form>
               <input
                 type="text"

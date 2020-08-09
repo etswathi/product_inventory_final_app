@@ -1,7 +1,7 @@
 import React from "react";
-import "./css/pdp.css";
+import "../css/pdp.css";
 import axios from "axios";
-import Common from "./Common";
+import Common from "../Common";
 class Pdpcomponent extends React.Component {
   constructor() {
     super();

@@ -1,5 +1,5 @@
 import React from "react";
-import "./css/login.css";
+import "../css/login.css";
 import { Link } from "react-router-dom";
 
 class Login extends React.Component {
@@ -133,7 +133,7 @@ class Login extends React.Component {
         this.props.history.push("/home");
       } else {
         alert("invalid field values");
-        this.props.history.push('/signup')
+        this.props.history.push("/signup");
       }
     }
   };

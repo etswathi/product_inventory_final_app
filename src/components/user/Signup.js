@@ -1,5 +1,5 @@
 import React from "react";
-import "./css/signup.css";
+import "../css/signup.css";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
@@ -15,7 +15,6 @@ class SignUp extends React.Component {
       password: "",
       signupbutton: false,
       nameError: "",
-      
     };
   }
 
@@ -47,7 +46,6 @@ class SignUp extends React.Component {
       console.log("set state for nameError");
       this.setState({
         nameError: nameerror,
-      
       });
 
       return false;

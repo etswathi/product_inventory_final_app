@@ -1,7 +1,7 @@
 import React from "react";
-import "./css/addnewproduct.css";
+import "../../css/addnewproduct.css";
 import axios from "axios";
-import Common from "./Common";
+import Common from "../../Common";
 class AddnewProduct extends React.Component {
   constructor(props) {
     super(props);
@@ -114,14 +114,18 @@ class AddnewProduct extends React.Component {
       <div>
         <Common></Common>
         <div className="content">
-         
-
-
-         
-
           <div className="wrapadd">
-            <h3 style={{fontFamily:'TimesNewRoman',fontSize:'30px',textDecoration:'underline',color:'lightgoldenrodyellow'}}><b>Add new product</b></h3>
-           
+            <h3
+              style={{
+                fontFamily: "TimesNewRoman",
+                fontSize: "30px",
+                textDecoration: "underline",
+                color: "lightgoldenrodyellow",
+              }}
+            >
+              <b>Add new product</b>
+            </h3>
+
             <form>
               <input
                 onChange={this.onChangeName}
@@ -153,15 +157,10 @@ class AddnewProduct extends React.Component {
                 id="category"
                 name="category"
               >
-               <option placeholder="Category">
-                  Please select Category
-                </option>
+                <option placeholder="Category">Please select Category</option>
                 <option value="Electronics">Electronics</option>
                 <option value="Dress">Dress</option>
                 <option value="Kids">Kids</option>
-                  
-                  
-                
               </select>
 
               {/* <input

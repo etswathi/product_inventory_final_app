@@ -1,6 +1,6 @@
 import React from "react";
-import logo from "./images/logoo.png";
-import "./css/products.css";
+import logo from "../images/logoo.png";
+import "../css/products.css";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import ProductDetails from "./productdetails";
@@ -325,12 +325,7 @@ class Products extends React.Component {
         </header>
         <div className="sidebar">
           <center>
-            <img
-              src={logo}
-              className="image"
-              alt="image"
-            />
-            
+            <img src={logo} className="image" alt="image" />
           </center>
           <a>
             <i className="fas fa-desktop"></i>
@@ -339,15 +334,21 @@ class Products extends React.Component {
           </a>
           <a>
             <i className="fas fa-tv"></i>
-            <span style={{cursor:'pointer'}} onClick={this.electronicsFetch}>Electronics</span>
+            <span style={{ cursor: "pointer" }} onClick={this.electronicsFetch}>
+              Electronics
+            </span>
           </a>
           <a>
             <i className="fas fa-tshirt"></i>
-            <span style={{cursor:'pointer'}} onClick={this.dressFetch}>Clothing</span>
+            <span style={{ cursor: "pointer" }} onClick={this.dressFetch}>
+              Clothing
+            </span>
           </a>
           <a>
             <i className="fas fa-book"></i>
-            <span style={{cursor:'pointer'}} onClick={this.kidsFetch}>Kids</span>
+            <span style={{ cursor: "pointer" }} onClick={this.kidsFetch}>
+              Kids
+            </span>
           </a>
 
           <Link to="/signup">
@@ -360,15 +361,8 @@ class Products extends React.Component {
           <div className="product-list">
             <div className="product-container">{this.renderAllProducts()}</div>
           </div>
-       
-       
-       
-       {/* {this.renderAllProducts} */}
-       
-       
-       
-       
-       
+
+          {/* {this.renderAllProducts} */}
         </div>
       </div>
     );
