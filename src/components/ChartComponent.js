@@ -3,6 +3,8 @@ import React from "react";
 import Chart from "react-google-charts";
 import "./css/chartcomponent.css";
 import Common from "./Common";
+import { Link } from "react-router-dom";
+import logo from "./images/logoo.png";
 
 class ChartComponent extends React.Component {
   constructor(props) {
@@ -58,12 +60,41 @@ class ChartComponent extends React.Component {
   render() {
     return (
       <div>
+        <div className="sidebar">
+          <center>
+            <img src={logo} className="image" alt="image" />
+          </center>
+          <Link to="/products">
+            <a href="#">
+              <i class="fas fa-backward"></i>
+              <span>Back</span>
+            </a>
+          </Link>
+          <Link to="/signup">
+            <a>
+              <i className="fas fa-sign-out-alt"></i>
+              <span>Signout</span>
+            </a>
+          </Link>
+        </div>
+
+        {/* <br />
+        <br />
+        <br />
+        <br /> */}
+
         <Common></Common>
 
-        <div className="content">
+        <div className="contentchart">
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+
           <h1
             style={{
-              marginTop: "-40px",
+              marginTop: "-30px",
               color: "white",
               fontFamily: "TimesNewRoman",
               textDecoration: "underline",
@@ -71,6 +102,7 @@ class ChartComponent extends React.Component {
           >
             Stock details:{this.props.location.state.product}
           </h1>
+
           <Chart
             chartType="BarChart"
             width="100%"

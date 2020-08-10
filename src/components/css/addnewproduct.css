@@ -142,9 +142,9 @@ label #sidebar_btn:hover {
   margin-left: 170px;
   width: 80px;
 }
-.content {
+.addcontent {
   margin-left: 250px;
-  background-color: lightgray;
+  background-image: url("../images//background.jpg");
   background-position: center;
   background-size: cover;
   height: 100vh;
@@ -159,7 +159,7 @@ label #sidebar_btn:hover {
 
 .wrapadd {
   margin: auto;
-  margin-top: -60px;
+  margin-top: auto;
   max-width: 400px;
   border-radius: 20px;
   border: 2px solid lightgray;

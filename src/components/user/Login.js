@@ -1,6 +1,7 @@
 import React from "react";
 import "../css/login.css";
 import { Link } from "react-router-dom";
+import { Message } from "semantic-ui-react";
 
 class Login extends React.Component {
   constructor(props) {
@@ -14,17 +15,22 @@ class Login extends React.Component {
       id: 0,
       array: "",
       pass: "",
+      invalid: false,
     };
   }
 
   componentWillMount() {
     console.log(this.props);
     if (this.props.history.location.state === undefined) {
-      alert("please try later");
       this.props.history.push("/signup");
     }
   }
 
+  closemessage = () => {
+    this.setState({
+      invalid: false,
+    });
+  };
   checkValidation = () => {
     console.log("chek");
     let nameerror = "";
@@ -54,6 +60,7 @@ class Login extends React.Component {
   };
 
   emailChange = (event) => {
+    this.closemessage();
     console.log(event.target.value);
 
     // if (this.props.history.location.state.loginbutton === undefined) {
@@ -71,7 +78,7 @@ class Login extends React.Component {
       console.log(this.props.history.location.state.dataArray);
       this.props.history.location.state.dataArray.filter((email) => {
         if (email.email === event.target.value) {
-          alert("email verified");
+          // alert("email verified");
           this.setState({
             emailcorrect: true,
             verifiedemail: email.email,
@@ -88,7 +95,7 @@ class Login extends React.Component {
       console.log(this.state.emailthroughsignup);
 
       if (this.props.history.location.state.email === event.target.value) {
-        alert("email verified through signup");
+        // alert("email verified through signup");
         this.setState({
           emailthroughsignup: true,
         });
@@ -99,6 +106,7 @@ class Login extends React.Component {
   };
 
   passwordChange = (event) => {
+    this.closemessage();
     console.log(event.target.value);
     if (
       this.props.history.location.state.loginbutton &&
@@ -116,7 +124,7 @@ class Login extends React.Component {
       );
       console.log(this.state.array);
       if (this.state.array === event.target.value) {
-        alert("password verified");
+        // alert("password verified");
         this.setState({
           passwordcorrect: true,
         });
@@ -130,7 +138,7 @@ class Login extends React.Component {
       console.log("signupbutton");
 
       if (this.props.history.location.state.password === event.target.value) {
-        alert("password verified through signup");
+        // alert("password verified through signup");
         this.setState(
           {
             passthroughsignup: true,
@@ -170,8 +178,12 @@ class Login extends React.Component {
           },
         });
       } else {
-        alert("invalid field values");
-        this.props.history.push("/signup");
+        console.log("invalid");
+        this.setState({
+          invalid: true,
+        });
+
+        // this.props.history.push("/signup");
       }
     }
   };
@@ -179,6 +191,15 @@ class Login extends React.Component {
   render() {
     return (
       <div className="row">
+        {this.state.invalid && (
+          <div style={{ backgroundColor: "maroon", color: "white" }}>
+            <Message negative>
+              <Message.Header>Error!!!!</Message.Header>
+              <p>Invalid Email id or password</p>
+            </Message>
+          </div>
+        )}
+
         <h2
           style={{
             textAlign: "center",
@@ -193,6 +214,7 @@ class Login extends React.Component {
         </h2>
         <div className="wrap">
           <h3>Sign In</h3>
+
           <form>
             <input
               type="email"

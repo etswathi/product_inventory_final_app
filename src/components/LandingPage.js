@@ -27,7 +27,17 @@ class LandingPage extends React.Component {
           </p>
         </div>
 
-        <button onClick={this.SignUpFunction}>SignUp</button>
+        <button
+          style={{
+            width: "400px",
+            marginTop: "150px",
+            backgroundColor: "lightyellow",
+          }}
+          onClick={this.SignUpFunction}
+        >
+          <i style={{ fontSize: "40px" }} class="fas fa-step-forward"></i>
+          <b>Click here to Login or Sign up</b>
+        </button>
       </div>
     );
   }

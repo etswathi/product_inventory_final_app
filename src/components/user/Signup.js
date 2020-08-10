@@ -38,11 +38,9 @@ class SignUp extends React.Component {
     if (this.state.email === "") {
       nameerror = "";
     }
-    if (!this.state.email.includes('@')) {
+    if (!this.state.email.includes("@")) {
       nameerror = "Email should contain @";
     }
-
-
 
     if (this.state.password === "") {
       nameerror = "";
@@ -149,13 +147,6 @@ class SignUp extends React.Component {
   render() {
     return (
       <div className="row">
-        {/* {this.state.alert && (
-              <div class="w3-panel w3-pale-green w3-border">
-                <h3>Success!</h3>
-                <p>Green often indicates something successful or positive.</p>
-              </div>
-            )} */}
-
         <h2
           style={{
             textAlign: "center",
@@ -216,7 +207,10 @@ class SignUp extends React.Component {
 
             <p style={{ textAlign: "center" }}>
               Already have an account?
-              <span onClick={this.loginButton} style={{ color: "white" }}>
+              <span
+                onClick={this.loginButton}
+                style={{ cursor: "pointer", color: "white" }}
+              >
                 Login
               </span>
             </p>

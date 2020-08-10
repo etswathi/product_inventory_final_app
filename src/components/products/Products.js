@@ -328,11 +328,11 @@ class Products extends React.Component {
           <center>
             <img src={logo} className="image" alt="image" />
           </center>
-          <a>
+         {/* <Link to="/"> <a>
             <i className="fas fa-desktop"></i>
 
             <span>Home</span>
-          </a>
+          </a></Link> */}
           <a>
             <i className="fas fa-tv"></i>
             <span style={{ cursor: "pointer" }} onClick={this.electronicsFetch}>
@@ -358,7 +358,7 @@ class Products extends React.Component {
           </Link>
         </div>
 
-        <div className="content">
+        <div className="contentproduct">
           <div className="product-list">
             <div className="product-container">{this.renderAllProducts()}</div>
           </div>

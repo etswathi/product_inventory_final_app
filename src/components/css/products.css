@@ -64,9 +64,9 @@ header {
 .search:focus {
   outline: none;
 }
-.content {
+.contentproduct {
   margin-left: 250px;
-  background: url('https://memotessil.eu/wp-content/uploads/2016/11/ecommerce-dark-background.jpg');
+  
   background-position: center;
   background-size: cover;
   height: 100vh;

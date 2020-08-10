@@ -2,6 +2,12 @@ import React from "react";
 import "../../css/addnewproduct.css";
 import axios from "axios";
 import Common from "../../Common";
+import logo from "../../images/logoo.png";
+import { Link } from "react-router-dom";
+import { Message } from "semantic-ui-react";
+
+
+
 class UpdateProduct extends React.Component {
   constructor(props) {
     super();
@@ -20,7 +26,8 @@ class UpdateProduct extends React.Component {
       week4: 0,
       week5: 0,
       week6: 0,
-      nameError:''
+      nameError: "",
+      update: false,
     };
   }
 
@@ -62,6 +69,11 @@ class UpdateProduct extends React.Component {
         );
     }
   }
+  closemessage = () => {
+    this.setState({
+      update: false,
+    });
+  };
   checkValidation = () => {
     console.log("chek");
     let nameerror = "";
@@ -119,110 +131,125 @@ class UpdateProduct extends React.Component {
   };
 
   onChangeName = (event) => {
+    this.closemessage();
     this.setState({
       productName: event.target.value,
     });
-    this.checkValidation()
+    this.checkValidation();
   };
   onChangeDescription = (event) => {
+    this.closemessage();
     this.setState({
       productDescription: event.target.value,
     });
-    this.checkValidation()
+    this.checkValidation();
   };
   onChangePrice = (event) => {
+    this.closemessage();
     this.setState({
       productPrice: event.target.value,
     });
-    this.checkValidation()
+    this.checkValidation();
   };
   onChangeCategory = (event) => {
+    this.closemessage();
     this.setState({
       categoryName: event.target.value,
     });
-    this.checkValidation()
+    this.checkValidation();
   };
   onChangeStock = (event) => {
+    this.closemessage();
     this.setState({
       inStock: event.target.value,
     });
-    this.checkValidation()
+    this.checkValidation();
   };
   onChangeQuantity = (event) => {
+    this.closemessage();
     this.setState({ quantity: event.target.value });
-    this.checkValidation()
+    this.checkValidation();
   };
-  
 
   onChangeWeek1 = (event) => {
+    this.closemessage();
     this.setState({ week1: event.target.value });
-    this.checkValidation()
+    this.checkValidation();
   };
   onChangeWeek2 = (event) => {
+    this.closemessage();
     this.setState({ week2: event.target.value });
-    this.checkValidation()
+    this.checkValidation();
   };
   onChangeWeek3 = (event) => {
+    this.closemessage();
     this.setState({ week3: event.target.value });
-    this.checkValidation()
+    this.checkValidation();
   };
   onChangeWeek4 = (event) => {
+    this.closemessage();
     this.setState({ week4: event.target.value });
-    this.checkValidation()
+    this.checkValidation();
   };
   onChangeWeek5 = (event) => {
+    this.closemessage();
     this.setState({ week5: event.target.value });
-    this.checkValidation()
+    this.checkValidation();
   };
   onChangeWeek6 = (event) => {
+    this.closemessage();
     this.setState({ week6: event.target.value });
-    this.checkValidation()
+    this.checkValidation();
   };
 
   onChangeImage = (event) => {
+    this.closemessage();
     this.setState({
       image: event.target.value,
     });
   };
 
   updatePro = (event) => {
-    if(this.checkValidation()){
-    event.preventDefault();
+    if (this.checkValidation()) {
+      event.preventDefault();
 
-    console.log(this.state);
+      console.log(this.state);
 
-    let RequestBody = {
-      productName: this.state.productName,
-      productDescription: this.state.productDescription,
-      productPrice: this.state.productPrice,
-      categoryName: this.state.categoryName,
-      inStock: this.state.inStock,
-      quantity: this.state.quantity,
-      productImage: this.state.image,
-      stock: {
-        week1: this.state.week1,
-        week2: this.state.week2,
-        week3: this.state.week3,
-        week4: this.state.week4,
-        week5: this.state.week5,
-        week6: this.state.week6,
-      },
-    };
-    axios
-      .put("http://localhost:3000/allproducts/" + this.state.id, RequestBody)
-      .then(
-        (response) => {
-          console.log(response);
-          console.log(this.props.history);
-
-          this.props.history.push("/products");
+      let RequestBody = {
+        productName: this.state.productName,
+        productDescription: this.state.productDescription,
+        productPrice: this.state.productPrice,
+        categoryName: this.state.categoryName,
+        inStock: this.state.inStock,
+        quantity: this.state.quantity,
+        productImage: this.state.image,
+        stock: {
+          week1: this.state.week1,
+          week2: this.state.week2,
+          week3: this.state.week3,
+          week4: this.state.week4,
+          week5: this.state.week5,
+          week6: this.state.week6,
         },
-        (error) => {
-          console.error(error);
-        }
-      );
+      };
+      axios
+        .put("http://localhost:3000/allproducts/" + this.state.id, RequestBody)
+        .then(
+          (response) => {
+            console.log(response);
+            console.log(this.props.history);
+            this.setState({
+              update: true,
+            });
+
+            // this.props.history.push("/products");
+          },
+          (error) => {
+            console.error(error);
+          }
+        );
+    }
   };
-}
 
   render() {
     console.log(this.props);
@@ -230,7 +257,41 @@ class UpdateProduct extends React.Component {
       <div>
         <Common></Common>
 
-        <div className="content">
+        <div className="sidebar">
+          <center>
+            <img src={logo} className="image" alt="image" />
+          </center>
+          <Link to="/products">
+            <a href="#">
+              <i class="fas fa-backward"></i>
+              <span>Back</span>
+            </a>
+          </Link>
+          <Link to="/signup">
+            <a>
+              <i className="fas fa-sign-out-alt"></i>
+              <span>Signout</span>
+            </a>
+          </Link>
+        </div>
+
+        <br />
+        <br />
+        <br />
+        <br />
+
+        <div className="addcontent">
+          {this.state.update && (
+            <div style={{ backgroundColor: "green", color: "white" }}>
+              <Message negative>
+                <Message.Header>
+                  <b style={{fontFamily:'TimesNewRoman',fontSize:'25px'}}>Updated!!!</b>
+                </Message.Header>
+                <p style={{fontFamily:'TimesNewRoman'}}>You have successfully updated the product details</p>
+              </Message>
+            </div>
+          )}
+
           <div className="wrapadd">
             <h3
               style={{
@@ -278,8 +339,7 @@ class UpdateProduct extends React.Component {
                 required
               />
 
-
-                {/* <select
+              {/* <select
                 onChange={this.onChangeCategory}
                 id="category"
                 name="category"
@@ -289,13 +349,6 @@ class UpdateProduct extends React.Component {
                 <option value="Dress">Dress</option>
                 <option value="Kids">Kids</option>
               </select> */}
-
-
-
-
-
-
-
 
               <input
                 onChange={this.onChangeStock}

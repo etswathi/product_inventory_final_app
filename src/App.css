@@ -4,8 +4,11 @@
 
 
 
+body{
 
-
+  background: url('./components//images//background.jpg');
+  background-size: cover;
+}
 
 
 

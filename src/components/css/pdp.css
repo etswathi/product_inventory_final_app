@@ -116,9 +116,8 @@ label #sidebar_btn:hover {
   margin-left: 170px;
   width: 80px;
 }
-.content {
+.contentpdp {
   margin-left: 250px;
-  background:url('https://memotessil.eu/wp-content/uploads/2016/11/ecommerce-dark-background.jpg');
   background-position: center;
   background-size: cover;
   height: 100vh;
@@ -134,7 +133,7 @@ label #sidebar_btn:hover {
 .cardpdp {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     max-width: 400px;
-height: 550px;
+    height: 550px;
     margin: auto;
     text-align: center;
     font-family: arial;

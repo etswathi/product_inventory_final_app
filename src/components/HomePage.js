@@ -74,7 +74,7 @@ class HomePage extends React.Component {
           <center>
             <img src={logo} className="image" alt="image" />
           </center>
-          <Link to="/dashboard">
+          <Link to="/">
             <i className="fas fa-desktop"></i>
             <span>Home</span>
           </Link>
@@ -83,14 +83,7 @@ class HomePage extends React.Component {
             <span>Products</span>
           </Link>
 
-          <a href="#">
-            <i className="fas fa-info-circle"></i>
-            <span>About</span>
-          </a>
-          <a href="#">
-            <i className="fas fa-sliders-h"></i>
-            <span>Contact</span>
-          </a>
+         
 
           <Link to="/signup">
             <i className="fas fa-sign-out-alt"></i>
@@ -98,7 +91,7 @@ class HomePage extends React.Component {
           </Link>
         </div>
 
-        <div className="content">
+        <div className="contenthome">
           <div className="slide-container">
             <span id="slider-image-1"></span>
             <span id="slider-image-2"></span>
@@ -134,13 +127,13 @@ class HomePage extends React.Component {
               />
             </div>
 
-            <div className="button-container">
+            {/* <div className="button-container">
               <a href="#slider-image-1" className="slider-button"></a>
               <a href="#slider-image-2" className="slider-button"></a>
               <a href="#slider-image-3" className="slider-button"></a>
               <a href="#slider-image-4" className="slider-button"></a>
               <a href="#slider-image-5" className="slider-button"></a>
-            </div>
+            </div> */}
           </div>
 
           <h3

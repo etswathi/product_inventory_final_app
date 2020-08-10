@@ -1,45 +1,9 @@
 {
   "allproducts": [
     {
-      "productName": "TV",
-      "productDescription": "Acer 18.5 inch HD Backlit LED LCD Monitor - 200 Nits - VGA Port - EB192Q (Black)",
-      "productPrice": 4339,
-      "categoryName": "Electronics",
-      "inStock": "true",
-      "quantity": 5,
-      "productImage": "https://images-na.ssl-images-amazon.com/images/I/91JxQOfRasL._SL1500_.jpg",
-      "stock": {
-        "week1": 90,
-        "week2": 80,
-        "week3": 90,
-        "week4": 90,
-        "week5": 50,
-        "week6": 20
-      },
-      "id": 1
-    },
-    {
-      "productName": "Laptop high end",
-      "productDescription": "HP 245 7GZ75PA#ACJ 14-inch Laptop (A6-9225/4GB/1TB/DOS/Integrated Graphics), Black",
-      "productPrice": 22800,
-      "categoryName": "Electronics",
-      "inStock": true,
-      "quantity": 5,
-      "productImage": "https://images-na.ssl-images-amazon.com/images/I/61Qj74HHVqL._SL1500_.jpg",
-      "stock": {
-        "week1": 90,
-        "week2": 80,
-        "week3": 90,
-        "week4": 90,
-        "week5": 50,
-        "week6": 20
-      },
-      "id": 3
-    },
-    {
-      "productName": "Women's Top",
+      "productName": "Women's Topp",
       "productDescription": "ILLI LONDON Women's Maxi Dresss",
-      "productPrice": 2800,
+      "productPrice": "28000",
       "categoryName": "Dress",
       "inStock": true,
       "quantity": 8,

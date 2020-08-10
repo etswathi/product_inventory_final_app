@@ -58,15 +58,6 @@ class ProductDetails extends React.Component {
             </button>
           </div>
         </div>
-
-        {/* <div class="cardproduct">
-  <img src={this.props.image}/>
-      <h1>{this.props.name}</h1>
-      <p class="priceproduct">${this.props.price}</p>
-      <p>{this.props.description}</p>
-  <p><button className="productbutton">Add to Cart</button></p>
-</div>
- */}
       </div>
     );
   }

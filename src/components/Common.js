@@ -1,11 +1,24 @@
 import React from "react";
 import "./css/common.css";
-import logo from "./images/logoo.png";
+import backimage from "./images/background.jpg";
+
+
+var background = {
+  backgroundImage: `url(${backimage})`,
+  height:'100%'
+};
+
+
+
+
+
+
 class Common extends React.Component {
   state = {};
   render() {
     return (
-      <div>
+
+      <body style={background}>
         <input type="checkbox" id="check" />
         <header>
           <label for="check">
@@ -32,7 +45,7 @@ class Common extends React.Component {
             </h3>
           </div>
         </header>
-        <div className="sidebar">
+        {/* <div className="sidebar">
           <center>
             <img src={logo} className="image" alt="image" />
           </center>
@@ -49,8 +62,8 @@ class Common extends React.Component {
         <br />
         <br />
         <br />
-        <br />
-      </div>
+        <br /> */}
+      </body>
     );
   }
 }

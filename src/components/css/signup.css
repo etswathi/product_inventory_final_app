@@ -2,10 +2,6 @@
   box-sizing: border-box;
 }
 
-body {
-  background: url("https://memotessil.eu/wp-content/uploads/2016/11/ecommerce-dark-background.jpg");
-  background-size: cover;
-}
 .wrap {
   max-width: 400px;
   border-radius: 20px;
@@ -26,7 +22,8 @@ h2 {
   text-align: center;
 }
 input[type="text"],
-input[type="password"],input[type="email"] {
+input[type="password"],
+input[type="email"] {
   width: 100%;
   box-sizing: border-box;
   padding: 12px 5px;

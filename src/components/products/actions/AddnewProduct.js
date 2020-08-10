@@ -2,6 +2,9 @@ import React from "react";
 import "../../css/addnewproduct.css";
 import axios from "axios";
 import Common from "../../Common";
+import logo from "../../images/logoo.png";
+import { Message } from "semantic-ui-react";
+import { Link } from "react-router-dom";
 class AddnewProduct extends React.Component {
   constructor(props) {
     super(props);
@@ -22,6 +25,7 @@ class AddnewProduct extends React.Component {
       week6: 0,
       nameError: "",
       qua: false,
+      add: false,
     };
   }
 
@@ -111,7 +115,11 @@ class AddnewProduct extends React.Component {
       axios.post("http://localhost:3000/allproducts", RequestBody).then(
         (response) => {
           console.log(response);
-          this.props.history.push("/products");
+
+          this.setState({
+            add: true,
+          });
+          // this.props.history.push("/products");
         },
         (error) => {
           console.error(error);
@@ -190,127 +198,168 @@ class AddnewProduct extends React.Component {
     return (
       <div>
         <Common></Common>
-        <div className="content">
-          <div className="wrapadd">
-            <h3
-              style={{
-                fontFamily: "TimesNewRoman",
-                fontSize: "30px",
-                textDecoration: "underline",
-                color: "lightgoldenrodyellow",
-              }}
-            >
-              <b>Add new product</b>
-            </h3>
 
-            <form>
-              <input
-                onChange={this.onChangeName}
-                type="text"
-                placeholder="Product Name"
-                required
-              />
-              <input
-                onChange={this.onChangeDescription}
-                type="text"
-                placeholder="Product Description"
-                required
-              />
-              <input
-                onChange={this.onChangePrice}
-                type="number"
-                placeholder="Price"
-                required
-              />
-              {/* <input
-                onChange={this.onChangeCategory}
-                type="text"
-                placeholder="Category"
-                required
-              /> */}
+        <div className="sidebar">
+          <center>
+            <img src={logo} className="image" alt="image" />
+          </center>
+          <Link to="/products">
+            <a href="#">
+              <i class="fas fa-backward"></i>
+              <span>Back</span>
+            </a>
+          </Link>
+          <Link to="/signup">
+            <a>
+              <i className="fas fa-sign-out-alt"></i>
+              <span>Signout</span>
+            </a>
+          </Link>
+        </div>
 
-              <select
-                onChange={this.onChangeCategory}
-                id="category"
-                name="category"
+        <br />
+        <br />
+        <br />
+        <br />
+
+        <div className="addcontent">
+          {this.state.add && (
+            <div style={{ backgroundColor: "green", color: "white" }}>
+              <Message negative>
+                <Message.Header>
+                  <b style={{ fontFamily: "TimesNewRoman", fontSize: "25px" }}>
+                    Added!!!
+                  </b>
+                </Message.Header>
+                <p style={{ fontFamily: "TimesNewRoman" }}>
+                  You have successfully added the product details
+                </p>
+              </Message>
+            </div>
+          )}
+
+          {!this.state.add && (
+            <div className="wrapadd">
+              <h3
+                style={{
+                  fontFamily: "TimesNewRoman",
+                  fontSize: "30px",
+                  textDecoration: "underline",
+                  color: "lightgoldenrodyellow",
+                }}
               >
-                <option placeholder="Category">Please select Category</option>
-                <option value="Electronics">Electronics</option>
-                <option value="Dress">Dress</option>
-                <option value="Kids">Kids</option>
-              </select>
+                <b>Add new product</b>
+              </h3>
 
-              {/* <input
-                onChange={this.onChangeStock}
-                type="text"
-                placeholder="Stock"
-                required
-              /> */}
+              <form>
+                <input
+                  onChange={this.onChangeName}
+                  type="text"
+                  placeholder="Product Name"
+                  required
+                />
+                <input
+                  onChange={this.onChangeDescription}
+                  type="text"
+                  placeholder="Product Description"
+                  required
+                />
+                <input
+                  onChange={this.onChangePrice}
+                  type="number"
+                  placeholder="Price"
+                  required
+                />
+                {/* <input
+    onChange={this.onChangeCategory}
+    type="text"
+    placeholder="Category"
+    required
+  /> */}
 
-              <select onChange={this.onChangeStock} id="stock" name="stock">
-                <option placeholder="In Stock">
-                  Please select stock availability
-                </option>
-                <option value="false">false</option>
-                <option value="true">true</option>
-              </select>
+                <select
+                  onChange={this.onChangeCategory}
+                  id="category"
+                  name="category"
+                >
+                  <option placeholder="Category">Please select Category</option>
+                  <option value="Electronics">Electronics</option>
+                  <option value="Dress">Dress</option>
+                  <option value="Kids">Kids</option>
+                </select>
 
-              <input
-                onChange={this.onChangeQuantity}
-                type="number"
-                placeholder="Quantity"
-                required
-              />
+                {/* <input
+    onChange={this.onChangeStock}
+    type="text"
+    placeholder="Stock"
+    required
+  /> */}
 
-              {this.state.nameError}
+                <select onChange={this.onChangeStock} id="stock" name="stock">
+                  <option placeholder="In Stock">
+                    Please select stock availability
+                  </option>
+                  <option value="false">false</option>
+                  <option value="true">true</option>
+                </select>
 
-              <input
-                onChange={this.onChangeWeek1}
-                type="number"
-                placeholder="stock:week 1"
-                required
-              />
-              <input
-                onChange={this.onChangeWeek2}
-                type="number"
-                placeholder="stock:week 2"
-                required
-              />
-              <input
-                onChange={this.onChangeWeek3}
-                type="number"
-                placeholder="stock:week 3"
-                required
-              />
-              <input
-                onChange={this.onChangeWeek4}
-                type="number"
-                placeholder="stock:week 4"
-                required
-              />
-              <input
-                onChange={this.onChangeWeek5}
-                type="number"
-                placeholder="stock:week 5"
-                required
-              />
-              <input
-                onChange={this.onChangeWeek6}
-                type="number"
-                placeholder="stock:week 6"
-                required
-              />
+                <input
+                  onChange={this.onChangeQuantity}
+                  type="number"
+                  placeholder="Quantity"
+                  required
+                />
 
-              <input
-                onChange={this.onChangeImage}
-                type="text"
-                placeholder="Image"
-                required
-              />
+                {this.state.nameError}
 
-              <button onClick={this.addNewProduct}>Add</button>
-            </form>
-          </div>
+                <input
+                  onChange={this.onChangeWeek1}
+                  type="number"
+                  placeholder="stock:week 1"
+                  required
+                />
+                <input
+                  onChange={this.onChangeWeek2}
+                  type="number"
+                  placeholder="stock:week 2"
+                  required
+                />
+                <input
+                  onChange={this.onChangeWeek3}
+                  type="number"
+                  placeholder="stock:week 3"
+                  required
+                />
+                <input
+                  onChange={this.onChangeWeek4}
+                  type="number"
+                  placeholder="stock:week 4"
+                  required
+                />
+                <input
+                  onChange={this.onChangeWeek5}
+                  type="number"
+                  placeholder="stock:week 5"
+                  required
+                />
+                <input
+                  onChange={this.onChangeWeek6}
+                  type="number"
+                  placeholder="stock:week 6"
+                  required
+                />
+
+                <input
+                  onChange={this.onChangeImage}
+                  type="text"
+                  placeholder="Image"
+                  required
+                />
+
+                <button onClick={this.addNewProduct}>Add</button>
+              </form>
+            </div>
+          )}
         </div>
       </div>
     );

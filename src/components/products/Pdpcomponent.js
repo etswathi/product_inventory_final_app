@@ -2,11 +2,13 @@ import React from "react";
 import "../css/pdp.css";
 import axios from "axios";
 import Common from "../Common";
+import logo from "../images/logoo.png";
+import { Link } from "react-router-dom";
+import { Message } from "semantic-ui-react";
+
 class Pdpcomponent extends React.Component {
   constructor() {
     super();
-    
-    
 
     this.state = {
       delete: false,
@@ -14,7 +16,7 @@ class Pdpcomponent extends React.Component {
   }
 
   componentWillMount() {
-    if(this.props.location.state === undefined) {
+    if (this.props.location.state === undefined) {
       this.props.history.push("./products");
       window.location.reload(false);
     }
@@ -53,22 +55,43 @@ class Pdpcomponent extends React.Component {
       <div>
         <Common></Common>
 
+        <div className="sidebar">
+          <center>
+            <img src={logo} className="image" alt="image" />
+          </center>
+          <Link to="/products">
+            <a>
+              <i class="fas fa-backward"></i>
+              <span>Back</span>
+            </a>
+          </Link>
+          <Link to="/signup">
+            <a>
+              <i className="fas fa-sign-out-alt"></i>
+              <span>Signout</span>
+            </a>
+          </Link>
+        </div>
+
+        <br />
+        <br />
+        <br />
+        <br />
+
         {this.state.delete && (
-          <div>
-            <h1
-              style={{
-                color: "white",
-                fontSize: "90px",
-                textAlign: "center",
-                border: "2px solid black",
-              }}
-            >
-              deleted
-            </h1>
+          <div style={{ backgroundColor: "maroon", color: "white" }}>
+            <Message negative>
+              <Message.Header>
+                <b style={{ fontFamily: "TimesNewRoman", fontSize: "25px" }}>
+                  Deleted!!!
+                </b>
+              </Message.Header>
+              <p>You have successfully deleted the product details</p>
+            </Message>
           </div>
         )}
         {!this.state.delete && (
-          <div className="content">
+          <div className="contentpdp">
             <div class="cardpdp">
               <img
                 src={this.props.location.state.image}
