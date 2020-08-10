@@ -95,9 +95,9 @@ class HomePage extends React.Component {
           <div className="slide-container">
             <span id="slider-image-1"></span>
             <span id="slider-image-2"></span>
-            <span id="slider-image-3"></span>
+            {/* <span id="slider-image-3"></span>
             <span id="slider-image-4"></span>
-            <span id="slider-image-5"></span>
+            <span id="slider-image-5"></span> */}
 
             <div className="image-container">
               <img
@@ -110,7 +110,7 @@ class HomePage extends React.Component {
                 className="slider-image"
                 style={{ width: "800px", height: "300px" }}
               />
-              <img
+              {/* <img
                 src={image3}
                 className="slider-image"
                 style={{ width: "800px", height: "300px" }}
@@ -124,7 +124,7 @@ class HomePage extends React.Component {
                 src={image5}
                 className="slider-image"
                 style={{ width: "800px", height: "300px" }}
-              />
+              /> */}
             </div>
 
             {/* <div className="button-container">

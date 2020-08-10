@@ -19,24 +19,6 @@
       "id": 4
     },
     {
-      "productName": "Saree",
-      "productDescription": "Anni Designer Women's Orange Color Satin Silk Printed Saree With Blouse Piece(PRINTED ROSHNI ORANGE_Free Size)",
-      "productPrice": 22800,
-      "categoryName": "Dress",
-      "inStock": true,
-      "quantity": 5,
-      "productImage": "https://images-na.ssl-images-amazon.com/images/I/81zUZEJOrAL._UL1500_.jpg",
-      "stock": {
-        "week1": 90,
-        "week2": 80,
-        "week3": 90,
-        "week4": 90,
-        "week5": 50,
-        "week6": 20
-      },
-      "id": 5
-    },
-    {
       "productName": "Toy",
       "productDescription": "NKK PNP Newly Kids Sofa Cum Bed (Pink)",
       "productPrice": 2800,
@@ -89,6 +71,24 @@
         "week6": 40
       },
       "id": 9
+    },
+    {
+      "productName": " AVSHUB",
+      "productDescription": " AVSHUB Extra Soft Stuffed Toy for Girls Kids",
+      "productPrice": "7000",
+      "categoryName": "Kids",
+      "inStock": "false",
+      "quantity": "80",
+      "productImage": "https://images-na.ssl-images-amazon.com/images/I/314Zc-pOk4L.jpg",
+      "stock": {
+        "week1": 70,
+        "week2": 80,
+        "week3": 60,
+        "week4": 80,
+        "week5": 70,
+        "week6": 70
+      },
+      "id": 10
     }
   ],
   "allusers": [
@@ -115,6 +115,14 @@
       "email": "anooprahul@gmail.com",
       "password": "anooprahul",
       "id": 3
+    },
+    {
+      "firstName": "aswin",
+      "lastName": "t",
+      "userName": "Aswin",
+      "email": "a@gmail.com",
+      "password": "p",
+      "id": 4
     }
   ]
 }

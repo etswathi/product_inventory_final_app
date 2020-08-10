@@ -37,42 +37,44 @@ class AddnewProduct extends React.Component {
       nameerror = "Please enter first name";
     }
     if (this.state.productDescription === "") {
-      nameerror = "Please enter last name";
+      nameerror = "Please enter first name";
     }
     if (this.state.productPrice === "") {
-      nameerror = "Please enter user name";
+      nameerror = "Please enter first name";
     }
     if (this.state.categoryName === "") {
-      nameerror = "Please enter email";
+      nameerror = "Please enter first name";
     }
     if (this.state.inStock === "") {
-      nameerror = "Please enter password";
+      nameerror = "Please enter first name";
     }
     if (this.state.quantity === "") {
-      nameerror = "Please enter password";
+      nameerror = "Please enter first name";
     }
 
-    if (this.state.quantity === 0) {
-      nameerror = "quantity should not be 0";
+    if (this.state.quantity != 0) {
+      this.setState({
+        qua: false,
+      });
     }
 
     if (this.state.week1 === "") {
-      nameerror = "Please enter password";
+      nameerror = "Please enter first name";
     }
     if (this.state.week2 === "") {
-      nameerror = "Please enter password";
+      nameerror = "Please enter first name";
     }
     if (this.state.week3 === "") {
-      nameerror = "Please enter password";
+      nameerror = "Please enter first name";
     }
     if (this.state.week4 === "") {
-      nameerror = "Please enter password";
+      nameerror = "Please enter first name";
     }
     if (this.state.week5 === "") {
-      nameerror = "Please enter password";
+      nameerror = "Please enter first name";
     }
     if (this.state.week6 === "") {
-      nameerror = "Please enter password";
+      nameerror = "Please enter first name";
     }
 
     if (nameerror) {
@@ -160,6 +162,11 @@ class AddnewProduct extends React.Component {
   };
   onChangeQuantity = (event) => {
     this.setState({ quantity: event.target.value });
+
+    if (this.state.quantity === 0) {
+      this.setState({ qua: true });
+    }
+
     this.checkValidation();
   };
 
@@ -227,7 +234,12 @@ class AddnewProduct extends React.Component {
             <div style={{ backgroundColor: "green", color: "white" }}>
               <Message negative>
                 <Message.Header>
-                  <b style={{ fontFamily: "TimesNewRoman", fontSize: "25px" }}>
+                  <b
+                    style={{
+                      fontFamily: "TimesNewRoman",
+                      fontSize: "25px",
+                    }}
+                  >
                     Added!!!
                   </b>
                 </Message.Header>
@@ -293,6 +305,7 @@ class AddnewProduct extends React.Component {
     type="text"
     placeholder="Stock"
     required
+    
   /> */}
 
                 <select onChange={this.onChangeStock} id="stock" name="stock">
@@ -310,7 +323,7 @@ class AddnewProduct extends React.Component {
                   required
                 />
 
-                {this.state.nameError}
+                {this.state.qua && <p style={{color:'white',backgroundColor:'maroon'}}>Quantity should not be 0</p>}
 
                 <input
                   onChange={this.onChangeWeek1}

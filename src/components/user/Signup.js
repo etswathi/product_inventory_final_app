@@ -185,8 +185,7 @@ class SignUp extends React.Component {
             />
             <input
               type="email"
-              id="email"
-              name="email"
+             
               onChange={this.emailChange}
               placeholder="Email"
               required
