@@ -56,12 +56,17 @@ class Login extends React.Component {
   emailChange = (event) => {
     console.log(event.target.value);
 
-    if (this.props.history.location.state.loginbutton === undefined) {
-      alert("please try later");
-      this.props.history.push("/signup");
-    }
+    // if (this.props.history.location.state.loginbutton === undefined) {
+    //   alert("please try later");
+    //   this.props.history.push("/signup");
+    // }
 
     if (this.props.history.location.state.loginbutton) {
+      if (this.props.history.location.state.loginbutton === undefined) {
+        alert("please try later");
+        this.props.history.push("/signup");
+      }
+
       console.log("loginbutton");
       console.log(this.props.history.location.state.dataArray);
       this.props.history.location.state.dataArray.filter((email) => {
@@ -190,7 +195,7 @@ class Login extends React.Component {
           <h3>Sign In</h3>
           <form>
             <input
-              type="text"
+              type="email"
               onChange={this.emailChange}
               placeholder="Email"
               required

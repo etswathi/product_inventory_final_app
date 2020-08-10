@@ -20,11 +20,10 @@ class AddnewProduct extends React.Component {
       week4: 0,
       week5: 0,
       week6: 0,
-      nameError:''
+      nameError: "",
+      qua: false,
     };
   }
-
-
 
   checkValidation = () => {
     console.log("chek");
@@ -48,6 +47,11 @@ class AddnewProduct extends React.Component {
     if (this.state.quantity === "") {
       nameerror = "Please enter password";
     }
+
+    if (this.state.quantity === 0) {
+      nameerror = "quantity should not be 0";
+    }
+
     if (this.state.week1 === "") {
       nameerror = "Please enter password";
     }
@@ -82,50 +86,39 @@ class AddnewProduct extends React.Component {
     return true;
   };
 
-
-
-
-
-
-
-
-
-
-
   addNewProduct = (event) => {
-
     if (this.checkValidation()) {
-    event.preventDefault();
-    console.log(this.state.image);
+      event.preventDefault();
+      console.log(this.state.image);
 
-    let RequestBody = {
-      productName: this.state.productName,
-      productDescription: this.state.productDescription,
-      productPrice: this.state.productPrice,
-      categoryName: this.state.categoryName,
-      inStock: this.state.inStock,
-      quantity: this.state.quantity,
-      productImage: this.state.image,
-      stock: {
-        week1: this.state.week1,
-        week2: this.state.week2,
-        week3: this.state.week3,
-        week4: this.state.week4,
-        week5: this.state.week5,
-        week6: this.state.week6,
-      },
-    };
-    axios.post("http://localhost:3000/allproducts", RequestBody).then(
-      (response) => {
-        console.log(response);
-        this.props.history.push("/products");
-      },
-      (error) => {
-        console.error(error);
-      }
-    );
+      let RequestBody = {
+        productName: this.state.productName,
+        productDescription: this.state.productDescription,
+        productPrice: this.state.productPrice,
+        categoryName: this.state.categoryName,
+        inStock: this.state.inStock,
+        quantity: this.state.quantity,
+        productImage: this.state.image,
+        stock: {
+          week1: this.state.week1,
+          week2: this.state.week2,
+          week3: this.state.week3,
+          week4: this.state.week4,
+          week5: this.state.week5,
+          week6: this.state.week6,
+        },
+      };
+      axios.post("http://localhost:3000/allproducts", RequestBody).then(
+        (response) => {
+          console.log(response);
+          this.props.history.push("/products");
+        },
+        (error) => {
+          console.error(error);
+        }
+      );
+    }
   };
-  }
 
   onChangeName = (event) => {
     this.setState({
@@ -161,7 +154,6 @@ class AddnewProduct extends React.Component {
     this.setState({ quantity: event.target.value });
     this.checkValidation();
   };
-  
 
   onChangeWeek1 = (event) => {
     this.setState({ week1: parseInt(event.target.value) });
@@ -269,6 +261,8 @@ class AddnewProduct extends React.Component {
                 placeholder="Quantity"
                 required
               />
+
+              {this.state.nameError}
 
               <input
                 onChange={this.onChangeWeek1}

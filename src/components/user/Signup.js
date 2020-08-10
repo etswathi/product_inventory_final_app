@@ -130,7 +130,7 @@ class SignUp extends React.Component {
               signupbutton: true,
               email: this.state.email,
               password: this.state.password,
-              username:this.state.userName
+              username: this.state.userName,
             },
           });
         },
@@ -187,7 +187,9 @@ class SignUp extends React.Component {
               required
             />
             <input
-              type="text"
+              type="email"
+              id="email"
+              name="email"
               onChange={this.emailChange}
               placeholder="Email"
               required
@@ -198,7 +200,10 @@ class SignUp extends React.Component {
               placeholder="Password"
               required
             />
-            <button onClick={this.signUpfun}>Continue</button>
+
+            <button type="submit" onClick={this.signUpfun}>
+              Continue
+            </button>
 
             <h3>OR</h3>
 

@@ -151,22 +151,6 @@
       "email": "anooprahul@gmail.com",
       "password": "anooprahul",
       "id": 3
-    },
-    {
-      "firstName": "Aswathi",
-      "lastName": "A",
-      "userName": "Aswati",
-      "email": "aswathi@gmail.com",
-      "password": "aswathi",
-      "id": 4
-    },
-    {
-      "firstName": "llmm",
-      "lastName": "ff",
-      "userName": "Samyuktha",
-      "email": "s@gmail.com",
-      "password": "s",
-      "id": 14
     }
   ]
 }
