@@ -27,19 +27,25 @@ class SignUp extends React.Component {
     let nameerror = "";
     let sinceerror = "";
     if (this.state.firstName === "") {
-      nameerror = "Please enter first name";
+      nameerror = "";
     }
     if (this.state.lastName === "") {
-      nameerror = "Please enter last name";
+      nameerror = "";
     }
     if (this.state.userName === "") {
-      nameerror = "Please enter user name";
+      nameerror = "";
     }
     if (this.state.email === "") {
-      nameerror = "Please enter email";
+      nameerror = "";
     }
+    if (!this.state.email.includes('@')) {
+      nameerror = "Email should contain @";
+    }
+
+
+
     if (this.state.password === "") {
-      nameerror = "Please enter password";
+      nameerror = "";
     }
 
     if (nameerror) {
@@ -194,6 +200,7 @@ class SignUp extends React.Component {
               placeholder="Email"
               required
             />
+            {this.state.nameError}
             <input
               type="password"
               onChange={this.passwordChange}
