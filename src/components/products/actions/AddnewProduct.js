@@ -226,7 +226,7 @@ class AddnewProduct extends React.Component {
               />
               <input
                 onChange={this.onChangePrice}
-                type="text"
+                type="number"
                 placeholder="Price"
                 required
               />
@@ -265,44 +265,44 @@ class AddnewProduct extends React.Component {
 
               <input
                 onChange={this.onChangeQuantity}
-                type="text"
+                type="number"
                 placeholder="Quantity"
                 required
               />
 
               <input
                 onChange={this.onChangeWeek1}
-                type="text"
+                type="number"
                 placeholder="stock:week 1"
                 required
               />
               <input
                 onChange={this.onChangeWeek2}
-                type="text"
+                type="number"
                 placeholder="stock:week 2"
                 required
               />
               <input
                 onChange={this.onChangeWeek3}
-                type="text"
+                type="number"
                 placeholder="stock:week 3"
                 required
               />
               <input
                 onChange={this.onChangeWeek4}
-                type="text"
+                type="number"
                 placeholder="stock:week 4"
                 required
               />
               <input
                 onChange={this.onChangeWeek5}
-                type="text"
+                type="number"
                 placeholder="stock:week 5"
                 required
               />
               <input
                 onChange={this.onChangeWeek6}
-                type="text"
+                type="number"
                 placeholder="stock:week 6"
                 required
               />

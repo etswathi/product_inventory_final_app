@@ -265,7 +265,7 @@ class UpdateProduct extends React.Component {
               />
               <input
                 onChange={this.onChangePrice}
-                type="text"
+                type="number"
                 placeholder="Price"
                 value={this.state.productPrice}
                 required
@@ -277,6 +277,26 @@ class UpdateProduct extends React.Component {
                 value={this.state.categoryName}
                 required
               />
+
+
+                {/* <select
+                onChange={this.onChangeCategory}
+                id="category"
+                name="category"
+              >
+                <option defaultValue={this.state.categoryName}></option>
+                <option value="Electronics">Electronics</option>
+                <option value="Dress">Dress</option>
+                <option value="Kids">Kids</option>
+              </select> */}
+
+
+
+
+
+
+
+
               <input
                 onChange={this.onChangeStock}
                 type="text"
@@ -287,42 +307,42 @@ class UpdateProduct extends React.Component {
 
               <input
                 onChange={this.onChangeWeek1}
-                type="text"
+                type="number"
                 placeholder="stock:week 1"
                 value={this.state.week1}
                 required
               />
               <input
                 onChange={this.onChangeWeek2}
-                type="text"
+                type="number"
                 placeholder="stock:week 2"
                 value={this.state.week2}
                 required
               />
               <input
                 onChange={this.onChangeWeek3}
-                type="text"
+                type="number"
                 placeholder="stock:week 3"
                 value={this.state.week3}
                 required
               />
               <input
                 onChange={this.onChangeWeek4}
-                type="text"
+                type="number"
                 placeholder="stock:week 4"
                 value={this.state.week4}
                 required
               />
               <input
                 onChange={this.onChangeWeek5}
-                type="text"
+                type="number"
                 placeholder="stock:week 5"
                 value={this.state.week5}
                 required
               />
               <input
                 onChange={this.onChangeWeek6}
-                type="text"
+                type="number"
                 placeholder="stock:week 6"
                 value={this.state.week6}
                 required
@@ -330,7 +350,7 @@ class UpdateProduct extends React.Component {
 
               <input
                 onChange={this.onChangeQuantity}
-                type="text"
+                type="number"
                 placeholder="Quantity"
                 value={this.state.quantity}
                 required

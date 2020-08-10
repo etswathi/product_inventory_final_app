@@ -23,7 +23,6 @@ class Login extends React.Component {
       alert("please try later");
       this.props.history.push("/signup");
     }
-    
   }
 
   checkValidation = () => {
@@ -34,6 +33,7 @@ class Login extends React.Component {
     if (this.state.email === "") {
       nameerror = "Please enter email";
     }
+
     if (this.state.password === "") {
       nameerror = "Please enter password";
     }
@@ -60,14 +60,6 @@ class Login extends React.Component {
       alert("please try later");
       this.props.history.push("/signup");
     }
-
-   
-
-
-
-
-
-
 
     if (this.props.history.location.state.loginbutton) {
       console.log("loginbutton");
@@ -103,7 +95,10 @@ class Login extends React.Component {
 
   passwordChange = (event) => {
     console.log(event.target.value);
-    if (this.props.history.location.state.loginbutton) {
+    if (
+      this.props.history.location.state.loginbutton &&
+      this.state.emailcorrect === true
+    ) {
       console.log("loginbutton");
       var d = this.props.history.location.state.dataArray.filter((password) => {
         return password.id === this.state.id;
