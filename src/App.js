@@ -11,8 +11,9 @@ import AddnewProduct from "./components/products/actions/AddnewProduct";
 import Login from "./components/user/Login";
 import UpdateProduct from "./components/products/actions/UpdateProduct";
 import LandingPage from "./components/LandingPage";
-import ChartComponent from "./components/ChartComponent";
+import ChartComponent from "./components/charts/ChartComponent";
 import Pdpcomponent from "./components/products/Pdpcomponent";
+import CategoryChart from "./components/charts/CategoryChart";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
         <Route path="/update" component={UpdateProduct}></Route>
         <Route path="/chart" component={ChartComponent}></Route>
         <Route path="/pdp" component={Pdpcomponent}></Route>
+        <Route path="/CategoryChart" component={CategoryChart}></Route>
       </Switch>
     </div>
   );

@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../images/logoo.png";
+import logo from "../images/inventory.jpg";
 import "../css/products.css";
 import { Link } from "react-router-dom";
 import axios from "axios";
@@ -14,6 +14,9 @@ class Products extends React.Component {
       presentId: 0,
       searchproducts: [],
       search: false,
+      dashbuttone: false,
+      dashbuttond: false,
+      dashbuttonk: false,
     };
   }
 
@@ -154,22 +157,44 @@ class Products extends React.Component {
     });
   };
 
-  electronicsFetch = () => {
-    axios
-      .get("http://localhost:3000/allproducts?categoryName=Electronics")
-      .then(
-        (response) => {
-          console.log(response);
-          this.setState({
-            products: response.data,
-          });
-          this.renderAllProducts();
-        },
+  // electronicsFetch = () => {
+  //   axios
+  //     .get("http://localhost:3000/allproducts?categoryName=Electronics")
+  //     .then(
+  //       (response) => {
+  //         console.log(response);
+  //         this.setState({
+  //           products: response.data,
+  //         });
+  //         this.renderAllProducts();
+  //       },
 
-        (error) => {
-          console.error(error);
-        }
-      );
+  //       (error) => {
+  //         console.error(error);
+  //       }
+  //     );
+  // };
+
+  eleChart = () => {
+    console.log(this.state.products);
+    this.props.history.push({
+      pathname: "/CategoryChart",
+      state: this.state.products,
+    });
+  };
+  dressChart = () => {
+    console.log(this.state.products);
+    this.props.history.push({
+      pathname: "/CategoryChart",
+      state: this.state.products,
+    });
+  };
+  kidsChart = () => {
+    console.log(this.state.products);
+    this.props.history.push({
+      pathname: "/CategoryChart",
+      state: this.state.products,
+    });
   };
 
   electronicsFetch = () => {
@@ -178,9 +203,13 @@ class Products extends React.Component {
       .then(
         (response) => {
           console.log(response);
-          this.setState({
-            products: response.data,
-          },()=>console.log(this.state.products));
+          this.setState(
+            {
+              products: response.data,
+              dashbuttone: true,
+            },
+            () => console.log(this.state.products)
+          );
           this.renderAllProducts();
         },
 
@@ -193,9 +222,13 @@ class Products extends React.Component {
     axios.get("http://localhost:3000/allproducts?categoryName=Dress").then(
       (response) => {
         console.log(response);
-        this.setState({
-          products: response.data,
-        });
+        this.setState(
+          {
+            products: response.data,
+            dashbuttond: true,
+          },
+          () => console.log(this.state.products)
+        );
         this.renderAllProducts();
       },
 
@@ -208,9 +241,13 @@ class Products extends React.Component {
     axios.get("http://localhost:3000/allproducts?categoryName=Kids").then(
       (response) => {
         console.log(response);
-        this.setState({
-          products: response.data,
-        });
+        this.setState(
+          {
+            products: response.data,
+            dashbuttonk: true,
+          },
+          () => console.log(this.state.products)
+        );
         this.renderAllProducts();
       },
 
@@ -228,7 +265,7 @@ class Products extends React.Component {
           pathname: "/chart",
           state: {
             chartdata: response.data.stock,
-            product:response.data.productName
+            product: response.data.productName,
           },
         });
       },
@@ -328,7 +365,7 @@ class Products extends React.Component {
           <center>
             <img src={logo} className="image" alt="image" />
           </center>
-         {/* <Link to="/"> <a>
+          {/* <Link to="/"> <a>
             <i className="fas fa-desktop"></i>
 
             <span>Home</span>
@@ -351,6 +388,75 @@ class Products extends React.Component {
               Kids
             </span>
           </a>
+          <div>
+            {this.state.dashbuttone && (
+              <button
+                style={{
+                  cursor: "pointer",
+                  width: "200px",
+                  height: "45px",
+                  backgroundColor: "lightyellow",
+                  borderRadius: "10px",
+                }}
+                onClick={this.eleChart}
+              >
+                <b
+                  style={{
+                    color: "black",
+                    fontSize: "18px",
+                    fontFamily: "TimesNewRoman",
+                  }}
+                >
+                  Electronics Dashboard
+                </b>
+              </button>
+            )}
+            {this.state.dashbuttond && (
+              <button
+                style={{
+                  cursor: "pointer",
+                  width: "200px",
+                  height: "45px",
+                  backgroundColor: "lightyellow",
+                  borderRadius: "10px",
+                }}
+                onClick={this.dressChart}
+              >
+                <b
+                  style={{
+                    color: "black",
+                    fontSize: "18px",
+                    fontFamily: "TimesNewRoman",
+                  }}
+                >
+                  Clothing Dashboard
+                </b>
+              </button>
+            )}
+            {this.state.dashbuttonk && (
+              <button
+                style={{
+                  cursor: "pointer",
+                  width: "200px",
+                  height: "45px",
+                  backgroundColor: "lightyellow",
+                  borderRadius: "10px",
+                }}
+                onClick={this.kidsChart}
+              >
+                <b
+                  style={{
+                    color: "black",
+                    fontSize: "18px",
+                    fontFamily: "TimesNewRoman",
+                    margin: "auto",
+                  }}
+                >
+                  Kids Dashboard
+                </b>
+              </button>
+            )}
+          </div>
 
           <Link to="/signup">
             <i className="fas fa-sign-out-alt"></i>

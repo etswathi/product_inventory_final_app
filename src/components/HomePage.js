@@ -6,7 +6,7 @@ import image3 from "./images/71Ms71OIM2L._UX569_.jpg";
 import image4 from "./images/lap.jpg";
 import image5 from "./images/kids.jpg";
 import image6 from "./images/pexels-photo-396547.jpeg";
-import logo from "./images/logoo.png";
+import logo from "./images/inventory.jpg";
 import { Link } from "react-router-dom";
 import axios from "axios";
 class HomePage extends React.Component {

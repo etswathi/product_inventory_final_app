@@ -1,5 +1,6 @@
 import React from "react";
 import "./css/landpage.css";
+import inventory from './images/inventory.jpg'
 
 class LandingPage extends React.Component {
   constructor(props) {
@@ -27,17 +28,26 @@ class LandingPage extends React.Component {
           </p>
         </div>
 
-        <button
+
+        <div>
+          <img style={{width:'400px',height:'400px',borderRadius:'300px'}} src={inventory}/>
+          </div>
+
+          <button
           style={{
             width: "400px",
-            marginTop: "150px",
+            marginTop: "30px",
             backgroundColor: "lightyellow",
+          
           }}
           onClick={this.SignUpFunction}
         >
           <i style={{ fontSize: "40px" }} class="fas fa-step-forward"></i>
           <b>Click here to Login or Sign up</b>
         </button>
+        
+
+      
       </div>
     );
   }

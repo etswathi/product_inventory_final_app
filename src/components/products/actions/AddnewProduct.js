@@ -2,7 +2,7 @@ import React from "react";
 import "../../css/addnewproduct.css";
 import axios from "axios";
 import Common from "../../Common";
-import logo from "../../images/logoo.png";
+import logo from "../../images/inventory.jpg";
 import { Message } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 class AddnewProduct extends React.Component {
@@ -96,6 +96,7 @@ class AddnewProduct extends React.Component {
     if (this.checkValidation()) {
       event.preventDefault();
       console.log(this.state.image);
+     var avg=(this.state.week1+this.state.week2+this.state.week3+this.state.week4+this.state.week5+this.state.week6)/6
 
       let RequestBody = {
         productName: this.state.productName,
@@ -113,6 +114,7 @@ class AddnewProduct extends React.Component {
           week5: this.state.week5,
           week6: this.state.week6,
         },
+        averageStock:avg
       };
       axios.post("http://localhost:3000/allproducts", RequestBody).then(
         (response) => {

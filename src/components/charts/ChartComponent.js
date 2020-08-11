@@ -1,10 +1,10 @@
 import React from "react";
 
 import Chart from "react-google-charts";
-import "./css/chartcomponent.css";
-import Common from "./Common";
+import "../css/chartcomponent.css";
+import Common from "../Common";
 import { Link } from "react-router-dom";
-import logo from "./images/logoo.png";
+import logo from "../images/inventory.jpg";
 
 class ChartComponent extends React.Component {
   constructor(props) {

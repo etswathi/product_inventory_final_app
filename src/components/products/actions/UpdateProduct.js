@@ -2,7 +2,7 @@ import React from "react";
 import "../../css/addnewproduct.css";
 import axios from "axios";
 import Common from "../../Common";
-import logo from "../../images/logoo.png";
+import logo from "../../images/inventory.jpg";
 import { Link } from "react-router-dom";
 import { Message } from "semantic-ui-react";
 
@@ -173,32 +173,32 @@ class UpdateProduct extends React.Component {
 
   onChangeWeek1 = (event) => {
     this.closemessage();
-    this.setState({ week1: event.target.value });
+    this.setState({ week1: parseInt(event.target.value) });
     this.checkValidation();
   };
   onChangeWeek2 = (event) => {
     this.closemessage();
-    this.setState({ week2: event.target.value });
+    this.setState({ week2: parseInt(event.target.value) });
     this.checkValidation();
   };
   onChangeWeek3 = (event) => {
     this.closemessage();
-    this.setState({ week3: event.target.value });
+    this.setState({ week3: parseInt(event.target.value) });
     this.checkValidation();
   };
   onChangeWeek4 = (event) => {
     this.closemessage();
-    this.setState({ week4: event.target.value });
+    this.setState({ week4: parseInt(event.target.value) });
     this.checkValidation();
   };
   onChangeWeek5 = (event) => {
     this.closemessage();
-    this.setState({ week5: event.target.value });
+    this.setState({ week5: parseInt(event.target.value) });
     this.checkValidation();
   };
   onChangeWeek6 = (event) => {
     this.closemessage();
-    this.setState({ week6: event.target.value });
+    this.setState({ week6: parseInt(event.target.value) });
     this.checkValidation();
   };
 
@@ -214,6 +214,8 @@ class UpdateProduct extends React.Component {
       event.preventDefault();
 
       console.log(this.state);
+      var avg=(this.state.week1+this.state.week2+this.state.week3+this.state.week4+this.state.week5+this.state.week6)/6
+
 
       let RequestBody = {
         productName: this.state.productName,
@@ -231,6 +233,8 @@ class UpdateProduct extends React.Component {
           week5: this.state.week5,
           week6: this.state.week6,
         },
+        averageStock:avg
+
       };
       axios
         .put("http://localhost:3000/allproducts/" + this.state.id, RequestBody)

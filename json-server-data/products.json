@@ -16,6 +16,7 @@
         "week5": 50,
         "week6": 20
       },
+      "averageStock": 80,
       "id": 4
     },
     {
@@ -34,6 +35,7 @@
         "week5": 50,
         "week6": 20
       },
+      "averageStock": 80,
       "id": 7
     },
     {
@@ -52,6 +54,7 @@
         "week5": 30,
         "week6": 80
       },
+      "averageStock": 80,
       "id": 8
     },
     {
@@ -70,6 +73,7 @@
         "week5": 80,
         "week6": 40
       },
+      "averageStock": 80,
       "id": 9
     },
     {
@@ -88,7 +92,27 @@
         "week5": 70,
         "week6": 70
       },
+      "averageStock": 80,
       "id": 10
+    },
+    {
+      "productName": "Laptop",
+      "productDescription": "ASUS VivoBook 14 AMD Ryzen 3 3250U 14-inch FHD Compact",
+      "productPrice": "56787",
+      "categoryName": "Electronics",
+      "inStock": "true",
+      "quantity": "60",
+      "productImage": "https://images-na.ssl-images-amazon.com/images/I/81b4nLdmuzL._SL1500_.jpg",
+      "stock": {
+        "week1": 70,
+        "week2": 70,
+        "week3": 60,
+        "week4": 80,
+        "week5": 80,
+        "week6": 80
+      },
+      "averageStock": 73.33333333333333,
+      "id": 11
     }
   ],
   "allusers": [
