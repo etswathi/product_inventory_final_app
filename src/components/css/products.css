@@ -261,3 +261,11 @@ label #sidebar_btn:hover {
     font-size: 25px;
   }
 }
+
+@media screen and (max-width: 1024px){
+
+  .product-list .card {
+    width: 200px;
+    height: 400px;
+  }
+}
