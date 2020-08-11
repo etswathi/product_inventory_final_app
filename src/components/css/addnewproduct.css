@@ -150,6 +150,13 @@ label #sidebar_btn:hover {
   height: 100vh;
   transition: 0.5s;
 }
+
+
+
+
+
+
+
 #check:checked ~ .content {
   margin-left: 60px;
 }
@@ -227,4 +234,12 @@ input[type="submit"] {
   font-size: 20px;
   border-radius: 10px;
   font-weight: bold;
+}
+@media screen and (max-width: 500px) {
+
+.wrapadd{
+  width:300px;
+}
+
+
 }

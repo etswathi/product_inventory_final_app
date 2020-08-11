@@ -175,4 +175,11 @@ label #sidebar_btn:hover {
   .pdpbutton:hover {
     opacity: 0.7;
   }
+  @media screen and (max-width: 500px) {
+  
+  .cardpdp{
+    width: 300px;
+  }
+  
+  }
 

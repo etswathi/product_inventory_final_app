@@ -137,6 +137,38 @@ label #sidebar_btn:hover {
   left: -190px;
 }
 
+.headname {
+  font-size: 40px;
+  text-align: center;
+
+  margin-top: -60px;
+  font-family: lucida calligraphy;
+  color: lightgoldenrodyellow;
+}
+
+.headname {
+  margin-top: -180px;
+}
+
+@media screen and (max-width: 500px) {
+  .slide-container {
+    width: 700px;
+  }
+
+  label #sidebar_btn {
+    margin-left: -100px;
+  }
+  .homehead {
+    width: 580px;
+  }
+
+  .right p {
+    font-size: 15px;
+    margin-top: 30px;
+    margin-left: -90px;
+  }
+}
+
 #check:checked ~ .sidebar a span {
   display: none;
 }
@@ -190,6 +222,8 @@ label #sidebar_btn:hover {
   float: left;
   margin-top: 79px;
   padding: 0px;
+  width: 800px;
+  height: 300px;
 }
 /* .button-container {
   top: -250px;

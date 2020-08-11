@@ -103,12 +103,12 @@ class HomePage extends React.Component {
               <img
                 src={image1}
                 className="slider-image"
-                style={{ width: "800px", height: "300px" }}
+                // style={{ width: "800px", height: "300px" }}
               />
               <img
                 src={image2}
                 className="slider-image"
-                style={{ width: "800px", height: "300px" }}
+                // style={{ width: "800px", height: "300px" }}
               />
               {/* <img
                 src={image3}
@@ -136,15 +136,8 @@ class HomePage extends React.Component {
             </div> */}
           </div>
 
-          <h3
-            style={{
-              fontSize: "40px",
-              textAlign: "center",
-              marginTop: "-60px",
-              fontFamily: "lucida calligraphy",
-              color: "lightgoldenrodyellow",
-            }}
-          >
+          <h3 class="headname">
+           
             Welcome to the world of shopping ..
           </h3>
         </div>
