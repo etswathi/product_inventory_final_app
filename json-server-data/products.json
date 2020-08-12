@@ -139,14 +139,6 @@
       "email": "anooprahul@gmail.com",
       "password": "anooprahul",
       "id": 3
-    },
-    {
-      "firstName": "aswin",
-      "lastName": "t",
-      "userName": "Aswin",
-      "email": "a@gmail.com",
-      "password": "p",
-      "id": 4
     }
   ]
 }
