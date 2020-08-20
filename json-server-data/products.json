@@ -1,7 +1,7 @@
 {
   "allproducts": [
     {
-      "productName": "Women's Topp",
+      "productName": "Women's cloth",
       "productDescription": "ILLI LONDON Women's Maxi Dresss",
       "productPrice": "28000",
       "categoryName": "Dress",
@@ -16,13 +16,13 @@
         "week5": 50,
         "week6": 20
       },
-      "averageStock": 80,
+      "averageStock": 70,
       "id": 4
     },
     {
       "productName": "Toy",
       "productDescription": "NKK PNP Newly Kids Sofa Cum Bed (Pink)",
-      "productPrice": 2800,
+      "productPrice": "2800",
       "categoryName": "Kids",
       "inStock": true,
       "quantity": 8,
@@ -35,7 +35,7 @@
         "week5": 50,
         "week6": 20
       },
-      "averageStock": 80,
+      "averageStock": 70,
       "id": 7
     },
     {
@@ -139,6 +139,62 @@
       "email": "anooprahul@gmail.com",
       "password": "anooprahul",
       "id": 3
+    },
+    {
+      "firstName": "Asha",
+      "lastName": "T",
+      "userName": "Asha",
+      "email": "asha@gmail.com",
+      "password": "asha",
+      "id": 4
+    },
+    {
+      "firstName": "gg",
+      "lastName": "ff",
+      "userName": "",
+      "email": "",
+      "password": "",
+      "id": 5
+    },
+    {
+      "firstName": "f",
+      "lastName": "f",
+      "userName": "f",
+      "email": "f",
+      "password": "",
+      "id": 6
+    },
+    {
+      "firstName": "f",
+      "lastName": "d",
+      "userName": "",
+      "email": "",
+      "password": "",
+      "id": 7
+    },
+    {
+      "firstName": "f",
+      "lastName": "f",
+      "userName": "dd",
+      "email": "s@gmail.com",
+      "password": "k",
+      "id": 8
+    },
+    {
+      "firstName": "ffdddddd",
+      "lastName": "d",
+      "userName": "d",
+      "email": "d@gmail.com",
+      "password": "d@",
+      "id": 9
+    },
+    {
+      "firstName": "ssssss",
+      "lastName": "s",
+      "userName": "sss",
+      "email": "j@gmail.com",
+      "password": "s@",
+      "id": 10
     }
   ]
 }

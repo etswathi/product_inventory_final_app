@@ -36,7 +36,9 @@ class Products extends React.Component {
     this.setState({ searchValue: searchV });
     console.log(searchV);
     let searchF = this.state.products.filter((p) => {
-      return p.productName.toLowerCase().match(searchV.toLowerCase());
+      console.log(p.productPrice)
+      console.log(searchV)
+      return p.productName.toLowerCase().match(searchV.toLowerCase()) ||p.productPrice===searchV
     });
     console.log(searchF);
 

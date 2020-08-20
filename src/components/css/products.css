@@ -2,6 +2,7 @@ body {
   margin-top: 0px;
   padding: 0;
   font-family: "Roboto", sans-serif;
+  height: auto;
 }
 .marginn {
   margin-top: -300px;
@@ -242,6 +243,7 @@ label #sidebar_btn:hover {
   grid-column-gap: 20px;
   grid-row-gap: 40px;
   margin-top: 50px;
+  height: auto;
 }
 
 @media screen and (max-width: 500px) {

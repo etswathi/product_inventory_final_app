@@ -23,6 +23,12 @@ class ProductDetails extends React.Component {
   // };
   dashboard = () => {
     this.props.dashId(this.props.id);
+    console.log("first")
+    setTimeout(()=>{
+console.log("timeout")
+
+    },0)
+    console.log("end")
   };
 
   details = () => {
