@@ -1,12 +1,12 @@
 import React from "react";
-import "./css/homepage.css";
-import image1 from "./images/-1117Wx1400H-461001523-multi-MODEL.webp";
-import image2 from "./images/book.jpg";
-import image3 from "./images/71Ms71OIM2L._UX569_.jpg";
-import image4 from "./images/lap.jpg";
-import image5 from "./images/kids.jpg";
-import image6 from "./images/pexels-photo-396547.jpeg";
-import logo from "./images/inventory.jpg";
+import "./homepage.css";
+import image1 from "../../images/-1117Wx1400H-461001523-multi-MODEL.webp";
+import image2 from "../../images/book.jpg";
+import image3 from "../../images/71Ms71OIM2L._UX569_.jpg";
+import image4 from "../../images/lap.jpg";
+import image5 from "../../images/kids.jpg";
+import image6 from "../../images/pexels-photo-396547.jpeg";
+import logo from "../../images/inventory.jpg";
 import { Link } from "react-router-dom";
 import axios from "axios";
 class HomePage extends React.Component {

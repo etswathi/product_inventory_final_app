@@ -1,17 +1,7 @@
-
-
-
-
-
-
-body{
-
-  background: url('./components//images//background.jpg');
+body {
+  background: url("./images//background.jpg");
   background-size: cover;
 }
-
-
-
 
 .App {
   text-align: center;

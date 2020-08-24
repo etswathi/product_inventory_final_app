@@ -144,7 +144,7 @@ label #sidebar_btn:hover {
 }
 .addcontent {
   margin-left: 250px;
-  background-image: url("../images//background.jpg");
+  background-image: url("../../../../images//background.jpg");
   background-position: center;
   background-size: cover;
   height: 100vh;

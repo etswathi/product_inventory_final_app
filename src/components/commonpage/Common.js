@@ -1,6 +1,6 @@
 import React from "react";
-import "./css/common.css";
-import backimage from "./images/background.jpg";
+import "./common.css";
+import backimage from "../../images/background.jpg";
 
 
 var background = {

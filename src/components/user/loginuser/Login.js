@@ -1,5 +1,5 @@
 import React from "react";
-import "../css/login.css";
+import "./login.css";
 import { Link } from "react-router-dom";
 import { Message } from "semantic-ui-react";
 

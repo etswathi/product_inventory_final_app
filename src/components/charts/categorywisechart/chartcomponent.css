@@ -1,0 +1,20 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  background-color: lightgray;
+}
+
+.contentchart {
+  margin:auto;
+  background-color: lightgray;
+  background-image: url('../../../images//background.jpg');
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  transition: 0.5s;
+  margin-top: auto;
+  margin-left: 300px;
+  
+}
+

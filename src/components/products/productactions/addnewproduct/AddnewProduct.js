@@ -1,8 +1,8 @@
 import React from "react";
-import "../../css/addnewproduct.css";
+import "./addnewproduct.css";
 import axios from "axios";
-import Common from "../../Common";
-import logo from "../../images/inventory.jpg";
+import Common from "../../../commonpage/Common";
+import logo from "../../../../images/inventory.jpg";
 import { Message } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 class AddnewProduct extends React.Component {

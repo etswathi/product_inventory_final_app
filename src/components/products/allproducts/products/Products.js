@@ -1,9 +1,9 @@
 import React from "react";
-import logo from "../images/inventory.jpg";
-import "../css/products.css";
+import logo from "../../../../images/inventory.jpg";
+import "./products.css";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import ProductDetails from "./productdetails";
+import ProductDetails from "../productdetail/productdetails";
 
 class Products extends React.Component {
   constructor(props) {

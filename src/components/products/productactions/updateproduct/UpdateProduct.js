@@ -1,8 +1,8 @@
 import React from "react";
-import "../../css/addnewproduct.css";
+import "./addnewproduct.css";
 import axios from "axios";
-import Common from "../../Common";
-import logo from "../../images/inventory.jpg";
+import Common from "../../../commonpage/Common";
+import logo from "../../../../images/inventory.jpg";
 import { Link } from "react-router-dom";
 import { Message } from "semantic-ui-react";
 

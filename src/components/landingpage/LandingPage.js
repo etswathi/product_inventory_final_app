@@ -1,6 +1,6 @@
 import React from "react";
-import "./css/landpage.css";
-import inventory from './images/inventory.jpg'
+import "./landpage.css";
+import inventory from '../../images/inventory.jpg'
 
 class LandingPage extends React.Component {
   constructor(props) {
@@ -17,12 +17,12 @@ class LandingPage extends React.Component {
     return (
       <div>
         <div style={{ color: "white" }}>
-          <h1 style={{ fontSize: "80px", fontFamily: "TimesNewRoman" }}>
+          <h1 data-testid='h1'  style={{ fontSize: "80px", fontFamily: "TimesNewRoman" }}>
             Welcome
           </h1>
         </div>
         <div style={{ color: "white" }}>
-          <p style={{ fontSize: "20px", fontFamily: "sans-serif" }}>
+          <p data-testid='p' style={{ fontSize: "20px", fontFamily: "sans-serif" }}>
             Explore the world of products!!!!!!!Manage them....You are in the
             right place !!
           </p>
@@ -33,7 +33,7 @@ class LandingPage extends React.Component {
           <img style={{width:'400px',height:'400px',borderRadius:'300px'}} src={inventory}/>
           </div>
 
-          <button
+          <button data-testid='button'
           style={{
             width: "400px",
             marginTop: "30px",

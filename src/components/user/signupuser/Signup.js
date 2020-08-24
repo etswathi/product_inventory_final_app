@@ -1,5 +1,5 @@
 import React from "react";
-import "../css/signup.css";
+import "./signup.css";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
@@ -18,7 +18,8 @@ class SignUp extends React.Component {
       errorname:false,
       errorpass:false,
       passError:'',
-      firstnameError:""
+      firstnameError:"",
+      emailError:''
     };
   }
 
@@ -30,12 +31,25 @@ class SignUp extends React.Component {
     console.log("chek");
     let nameerror = "";
     let passerror = "";
-    let firstnameerror=""
+    let firstnameerror="";
+    let emailerror="";
     if (this.state.firstName === "") {
       nameerror = "enter first name";
     }
-    if (this.state.firstName.length<5) {
+    if (this.state.firstName.length<5 && this.state.firstName.length>0) {
+      console.log("fname error")
       firstnameerror = "First Name should have more than 5 characters";
+      this.setState({
+        errorname:true
+      })
+    }
+    if (this.state.firstName.length>5) {
+      console.log("no fname error")
+      firstnameerror=""
+      this.setState({
+        firstnameError:'',
+        errorname:false
+      })
     }
 
     if (this.state.lastName === "") {
@@ -48,7 +62,18 @@ class SignUp extends React.Component {
       nameerror = "enter pasword";
     }
     if (!this.state.email.includes("@")) {
-      nameerror = "Email should contain @";
+      emailerror = "Email should contain @";
+      this.setState({
+        erroremail:true
+      })
+    }
+    if (this.state.email.includes("@")) {
+      emailerror = "";
+      firstnameerror=""
+      this.setState({
+        emailError:'',
+        erroremail:false
+      })
     }
 
     if (this.state.password === "") {
@@ -56,6 +81,16 @@ class SignUp extends React.Component {
     }
     if (!this.state.password.includes("@"||"$"||"*")) {
       passerror = "Password should include atleast one special character";
+      this.setState({
+        passError:"",
+        errorpass:true
+      })
+    }
+    if (this.state.password.includes("@"||"$"||"*")) {
+      passerror = "";
+      this.setState({
+        errorpass:false
+      })
     }
     if (firstnameerror) {
       console.log("set state for nameError");
@@ -74,6 +109,14 @@ class SignUp extends React.Component {
 
       return false;
     }
+    if (emailerror) {
+      console.log("set state for nameError");
+      this.setState({
+        emailError: emailerror,
+      });
+
+      return false;
+    }
     if (passerror) {
       console.log("set state for nameError");
       this.setState({
@@ -84,34 +127,34 @@ class SignUp extends React.Component {
     }
 
     this.setState({
-      passError: "",nameError:"",firstnameError:""
+      passError: "",nameError:"",firstnameError:"",emailError:''
     });
     return true;
   };
 
   firstNameChange = (event) => {
     console.log(event.target.value);
-    this.setState({ firstName: event.target.value,errorname:false });
+    this.setState({ firstName: event.target.value,show:false });
     console.log(this.state.firstName);
     this.checkValidation();
   };
   lastNameChange = (event) => {
-    this.setState({ lastName: event.target.value });
+    this.setState({ lastName: event.target.value,show:false });
     console.log(this.state.lastName);
     this.checkValidation();
   };
   userNameChange = (event) => {
-    this.setState({ userName: event.target.value });
+    this.setState({ userName: event.target.value,show:false });
     console.log(this.state.userName);
     this.checkValidation();
   };
   emailChange = (event) => {
-    this.setState({ email: event.target.value });
+    this.setState({ email: event.target.value,show:false });
     console.log(this.state.email);
     this.checkValidation();
   };
   passwordChange = (event) => {
-    this.setState({ password: event.target.value,errorpass:false });
+    this.setState({ password: event.target.value,show:false });
     console.log(this.state.password);
     this.checkValidation();
   };
@@ -137,12 +180,15 @@ class SignUp extends React.Component {
   };
 
   signUpfun = (event) => {
-    this.setState({
-      errorname:true,
-    },()=>console.log(this.state.error))
+    event.preventDefault();
+    if(this.state.firstName===""||this.state.lastName===""||this.state.userName===""||this.state.email===""||this.state.password==="")
+    this.setState({show:true})
+    // this.setState({
+    //   errorname:true,
+    // },()=>console.log(this.state.error))
     if (this.checkValidation()) {
      
-      event.preventDefault();
+      
       console.log(this.state);
       var RequestBody = {
         firstName: this.state.firstName,
@@ -196,13 +242,15 @@ class SignUp extends React.Component {
           <form>
             {/* {this.state.nameError} */}
 
+            {this.state.show && <div style={{backgroundColor:'lightgoldenrodyellow',fontFamily:'TimesNewRoman',color:'black'}}>Please fill all fields</div>}
+
             <input
               type="text"
               onChange={this.firstNameChange}
               placeholder="First Name"
               required
             />
-            {this.state.errorname && <div>{this.state.firstnameError}</div>}
+            {this.state.errorname && <div style={{backgroundColor:'lightgoldenrodyellow',fontFamily:'TimesNewRoman',color:'black'}}>{this.state.firstnameError}</div>}
             
 
             <input
@@ -224,7 +272,7 @@ class SignUp extends React.Component {
               placeholder="Email"
               required
             />
-            {/* {this.state.nameError} */}
+            {this.state.erroremail && <div style={{backgroundColor:'lightgoldenrodyellow',fontFamily:'TimesNewRoman',color:'black'}}>{this.state.emailError}</div>}
             <input
               type="password"
               onChange={this.passwordChange}
@@ -232,7 +280,7 @@ class SignUp extends React.Component {
               required
             />
 
-        {this.state.errorpass && <div>{this.state.passError}</div>}
+        {this.state.errorpass && <div style={{backgroundColor:'lightgoldenrodyellow',fontFamily:'TimesNewRoman',color:'black'}}>{this.state.passError}</div>}
 
             <button type="submit" onClick={this.signUpfun}>
               Continue
