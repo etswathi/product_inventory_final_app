@@ -40,7 +40,7 @@ class Common extends React.Component {
             </div>
           </label>
           <div className="left_area">
-            <h3>
+            <h3 data-testid="h3">
               <span>Inventory.com</span>
             </h3>
           </div>
