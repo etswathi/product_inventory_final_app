@@ -1,7 +1,7 @@
 {
   "allproducts": [
     {
-      "productName": "Women's cloth",
+      "productName": "Women's cloths",
       "productDescription": "ILLI LONDON Women's Maxi Dresss",
       "productPrice": "28000",
       "categoryName": "Dress",
@@ -92,7 +92,7 @@
         "week5": 70,
         "week6": 70
       },
-      "averageStock": 80,
+      "averageStock": 71.66666666666667,
       "id": 10
     },
     {
@@ -163,6 +163,14 @@
       "email": "f@g",
       "password": "f@d",
       "id": 18
+    },
+    {
+      "firstName": "ArunChandra",
+      "lastName": "E",
+      "userName": "arun",
+      "email": "arun@gmail.com",
+      "password": "arun@h",
+      "id": 19
     }
   ]
 }

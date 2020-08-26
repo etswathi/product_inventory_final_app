@@ -275,3 +275,14 @@ label #sidebar_btn:hover {
     grid-column-gap: 1px;
   }
 }
+@media screen and (min-width: 1024px) and (max-width: 1500px)  {
+  .product-list .card {
+    width: 260px;
+    height: 450px;
+  }
+  .product-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 1px;
+  }
+}
